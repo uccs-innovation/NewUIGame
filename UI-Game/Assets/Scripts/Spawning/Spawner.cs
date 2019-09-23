@@ -63,8 +63,16 @@ public class Spawner : MonoBehaviour
     void HandlePacmanDeaths(GameObject pacman, int pointValue)
     {
         spawnedPacmen.Remove(pacman);
-        Destroy(pacman);
+        StartCoroutine(PacdeathTimer(pacman));
         Spawn();
+    }
+
+    IEnumerator PacdeathTimer(GameObject pacman)
+    {
+        pacman.GetComponent<Unit>().StopAllCoroutines();
+        yield return new WaitForSeconds(.1f);
+        Destroy(pacman);
+        yield return null;
     }
 
     Vector3 SpawnPoint()
