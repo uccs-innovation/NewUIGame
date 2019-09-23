@@ -12,6 +12,7 @@ TagManager:
   - pellet
   - pacman
   - projectileSpawn
+  - playerProjectile
   layers:
   - Default
   - TransparentFX

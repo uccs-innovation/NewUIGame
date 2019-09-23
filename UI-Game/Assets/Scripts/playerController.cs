@@ -44,9 +44,9 @@ public class playerController : MonoBehaviour
     GameObject energyBurst; // prefab for the energy burst projectile
 
     // The amount of force applied to projectiles
-    float projectileForce = 7f;
+    float projectileForce = 8f;
 
-    float cooldownBetweenProjectiles = .2f;
+    float cooldownBetweenProjectiles = .1f;
 
     SpriteRenderer sr;
 

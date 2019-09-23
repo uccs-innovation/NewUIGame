@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - PlatformController
     - PlayerProjectile
     - ScreenShake
+    - Spawner
     - StartMenu
     - Unit
     - ghostCatcher
@@ -72,11 +73,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9624}
     - Class: 114
-      Script: {instanceID: 11312}
+      Script: {instanceID: 11316}
     - Class: 114
-      Script: {instanceID: 11524}
+      Script: {instanceID: 11528}
     - Class: 114
-      Script: {instanceID: 11614}
+      Script: {instanceID: 11618}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -151,27 +152,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10602}
     - Class: 114
-      Script: {instanceID: 10772}
+      Script: {instanceID: 10774}
     - Class: 114
-      Script: {instanceID: 10890}
+      Script: {instanceID: 10892}
     - Class: 114
-      Script: {instanceID: 11240}
+      Script: {instanceID: 11188}
     - Class: 114
-      Script: {instanceID: 11312}
+      Script: {instanceID: 11244}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 11316}
     - Class: 114
-      Script: {instanceID: 11562}
+      Script: {instanceID: 11340}
     - Class: 114
-      Script: {instanceID: 11614}
+      Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 11978}
+      Script: {instanceID: 11618}
     - Class: 114
-      Script: {instanceID: 12270}
+      Script: {instanceID: 11982}
     - Class: 114
-      Script: {instanceID: 12368}
+      Script: {instanceID: 12274}
     - Class: 114
-      Script: {instanceID: 12442}
+      Script: {instanceID: 12372}
+    - Class: 114
+      Script: {instanceID: 12446}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -226,15 +229,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10390}
     - Class: 114
-      Script: {instanceID: 11312}
+      Script: {instanceID: 11316}
     - Class: 114
-      Script: {instanceID: 11324}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11524}
+      Script: {instanceID: 11528}
     - Class: 114
-      Script: {instanceID: 11614}
+      Script: {instanceID: 11618}
     - Class: 114
-      Script: {instanceID: 12074}
+      Script: {instanceID: 12078}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -900,6 +903,12 @@ ScriptsOnlyBuild:
     className: SceneSectionComponent
   - hash:
       serializedVersion: 2
+      Hash: 248046a020ee094d73794a6d909da208
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Spawner
+  - hash:
+      serializedVersion: 2
       Hash: 866c1ddfe35faad384fce006d7c156d3
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
@@ -1113,4 +1122,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Start.unity
   - Assets/Scenes/Instructions.unity
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/Users/Chad/Documents/Unity_Builds/UI-Game.exe
+  playerPath: E:/UnityBuilds/UI-Game.exe
