@@ -63,13 +63,6 @@ public class Spawner : MonoBehaviour
     void HandlePacmanDeaths(GameObject pacman, int pointValue)
     {
         spawnedPacmen.Remove(pacman);
-        StartCoroutine(KillPacman(pacman));
-
-    }
-
-    IEnumerator KillPacman(GameObject pacman)
-    {
-        yield return new WaitForSeconds(.1f);
         Destroy(pacman);
         Spawn();
     }

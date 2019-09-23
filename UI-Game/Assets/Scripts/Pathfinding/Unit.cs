@@ -28,6 +28,10 @@ public class Unit : MonoBehaviour
             StartCoroutine("Timer");
         }
     }
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
+    }
     IEnumerator FollowPath()
     {
         // This means that the target hasn't moved from his previous location since last path
