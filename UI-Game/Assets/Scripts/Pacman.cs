@@ -19,7 +19,7 @@ public class Pacman : MonoBehaviour
         // If we've collided with the player
         else if (collision.tag == "Player")
         {
-            pacmanDeath.Invoke(gameObject, 0);
+            pacmanDeath.Invoke(gameObject, 25);
         }
 
         else return;

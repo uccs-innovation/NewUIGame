@@ -5,7 +5,7 @@ using UnityEngine;
 public class Unit : MonoBehaviour
 {
     public Transform target;
-    float speed = 1.5f;
+    public float speed = 2.1f;
     Vector3[] path;
     int targetIndex;
 

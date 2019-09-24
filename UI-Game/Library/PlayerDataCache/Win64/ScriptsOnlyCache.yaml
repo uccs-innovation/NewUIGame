@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - PauseMenu
     - PlatformController
     - PlayerProjectile
+    - ScoreController
     - ScreenShake
     - Spawner
     - StartMenu
@@ -177,6 +178,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12372}
     - Class: 114
       Script: {instanceID: 12446}
+    - Class: 114
+      Script: {instanceID: 37926}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1097,7 +1100,7 @@ ScriptsOnlyBuild:
     className: CopyTransformFromGameObjectProxy
   - hash:
       serializedVersion: 2
-      Hash: 0d85f4fda1e0e70cd92c084d12f05cdc
+      Hash: 002020d0363e1d2fc6726436c90292ce
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Unit
@@ -1107,9 +1110,15 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: c22e95e42cc53fc0ea26797d6cecd890
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreController
   platform: 19
   scenePathNames:
   - Assets/Scenes/Start.unity
   - Assets/Scenes/Instructions.unity
   - Assets/Scenes/MainScene.unity
-  playerPath: E:/UnityBuilds/UI-Game.exe
+  playerPath: C:/Users/crede/Desktop/HoppyGhostBuild/UI-Game.exe

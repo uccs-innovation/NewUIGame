@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Spawner : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class Spawner : MonoBehaviour
     List<Transform> spawnPoints;
 
     List<GameObject> spawnedPacmen = new List<GameObject>();
+
+    static PointsGrantedEvent pointsGranted = new PointsGrantedEvent();
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +65,7 @@ public class Spawner : MonoBehaviour
 
     void HandlePacmanDeaths(GameObject pacman, int pointValue)
     {
+        pointsGranted.Invoke(pointValue);
         spawnedPacmen.Remove(pacman);
         StartCoroutine(PacdeathTimer(pacman));
         Spawn();
@@ -80,6 +84,10 @@ public class Spawner : MonoBehaviour
         return spawnPoints[Random.Range(0, spawnPoints.Count)].position;
     }
 
+    public static void AddPointsGrantedListener(UnityAction<int> handler)
+    {
+        pointsGranted.AddListener(handler);
+    }
     GameObject SelectPacman()
     {
         GameObject pacman = (Random.Range(0f, 1f) > .5f) ? redPacmanPrefab : greenPacmanPrefab;

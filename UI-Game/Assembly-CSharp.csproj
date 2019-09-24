@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Events\PacmanDeathEvent.cs" />
+    <Compile Include="Assets\Scripts\Events\PointsGrantedEvent.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\ghostCatcher.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
@@ -80,9 +81,11 @@
     <Compile Include="Assets\Scripts\PlatformData.cs" />
     <Compile Include="Assets\Scripts\playerController.cs" />
     <Compile Include="Assets\Scripts\PlayerProjectile.cs" />
+    <Compile Include="Assets\Scripts\ScoreController.cs" />
     <Compile Include="Assets\Scripts\ScreenShake.cs" />
     <Compile Include="Assets\Scripts\Spawning\Spawner.cs" />
     <Compile Include="Assets\Scripts\StartMenu.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
