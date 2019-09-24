@@ -41,7 +41,7 @@ public class ObjectiveComplete : MonoBehaviour
         int speedBonus = CalculateSpeedBonus(time);
         int finalScore = CalculateFinalScore(rawScore, speedBonus);
         speedBonusObject.text = "+" + speedBonus + " speed bonus!";
-        finalScoreObject.text = "Final Score: " + finalScore.ToString();
+        finalScoreObject.text = "Score: " + finalScore.ToString();
     }
 
     int CalculateFinalScore(int rawScore, int speedBonus)

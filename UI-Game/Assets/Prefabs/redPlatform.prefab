@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3163940429195514615}
   - component: {fileID: 3163940429195514612}
-  - component: {fileID: 2355295061181579541}
   m_Layer: 8
   m_Name: redPlatform
   m_TagString: platform
@@ -59,18 +58,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.500031, y: 0.99172735}
   m_EdgeRadius: 0
---- !u!114 &2355295061181579541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3163940429195514613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c69f005ed8567048ac65e1b6afc1e3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3163940430108834352
 GameObject:
   m_ObjectHideFlags: 0

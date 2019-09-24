@@ -65,6 +65,11 @@ public class Spawner : MonoBehaviour
 
     void HandlePacmanDeaths(GameObject pacman, int pointValue)
     {
+        // Stop drawing the pacman
+        SpriteRenderer[] spriteRenderers = pacman.GetComponentsInChildren<SpriteRenderer>();
+        spriteRenderers[0].enabled = false;
+        spriteRenderers[1].enabled = false;
+
         pointsGranted.Invoke(pointValue);
         spawnedPacmen.Remove(pacman);
         StartCoroutine(PacdeathTimer(pacman));
@@ -74,7 +79,7 @@ public class Spawner : MonoBehaviour
     IEnumerator PacdeathTimer(GameObject pacman)
     {
         pacman.GetComponent<Unit>().StopAllCoroutines();
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.5f);
         Destroy(pacman);
         yield return null;
     }

@@ -10,7 +10,7 @@ public class Pacman : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // If we've been hit by one of the player's projectiles, then update the player's score
+        // If we've been hit by one of the player's projectiles, then let your subscribers know
         if (collision.tag == "playerProjectile")
         {
             pacmanDeath.Invoke(gameObject, 100);
@@ -21,7 +21,6 @@ public class Pacman : MonoBehaviour
         {
             pacmanDeath.Invoke(gameObject, 25);
         }
-
         else return;
     }
 

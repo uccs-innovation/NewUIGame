@@ -7,14 +7,17 @@ public class Health : MonoBehaviour
 {
     Image healthBar;
 
+    [SerializeField]
+    GameObject objFailed;
+
     // How much damage to sustain after colliding with a pacman
-    float damage = .2f;
+    float damage = .4f;
 
     // How much regen takes place at each tick
     float repairRate;
 
     // How long between each regen tick (in seconds)
-    float regenTick = 1f;
+    float regenTick = .5f;
 
     // Is regen already active?
     bool isRegenNow = false;
@@ -25,7 +28,7 @@ public class Health : MonoBehaviour
         healthBar = GetComponent<Image>();
         healthBar.fillAmount = 1f;
 
-        repairRate = damage / 4f;
+        repairRate = damage / 3f;
     }
 
     void HandleHealthLoss()
@@ -35,6 +38,7 @@ public class Health : MonoBehaviour
         if (healthBar.fillAmount <= 0)
         {
             // This is where the ghost dies
+            GameObject objectiveFailed = Instantiate(objFailed);
         }
 
         if (!isRegenNow)

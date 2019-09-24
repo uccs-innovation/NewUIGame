@@ -44,6 +44,10 @@ public class playerController : MonoBehaviour
     [SerializeField]
     GameObject energyBurst; // prefab for the energy burst projectile
 
+    // Gameover UI for when the player falls from a platform
+    [SerializeField]
+    GameObject objFailed;
+
     // The amount of force applied to projectiles
     float projectileForce = 8f;
 
@@ -152,8 +156,12 @@ public class playerController : MonoBehaviour
     // Handles the event when the player falls from a platform
     void FallenGhostHandler()
     {
-        rb.velocity = Vector2.zero;
-        transform.position = startPosition;
+        //rb.velocity = Vector2.zero;
+        //transform.position = startPosition;
+
+        isPaused = true;
+        //GameWinEvent.Invoke();
+        GameObject objectiveFailed = Instantiate(objFailed);
     }
 
     void FireProjectile()
