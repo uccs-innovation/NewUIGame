@@ -13,6 +13,8 @@ TagManager:
   - pacman
   - projectileSpawn
   - playerProjectile
+  - scoreController
+  - Timer
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class playerController : MonoBehaviour
 {
@@ -57,12 +58,15 @@ public class playerController : MonoBehaviour
         FALLING
     }
 
+    UnityEvent GameWinEvent = new UnityEvent();
+
     bool isGrounded = true;
 
     MoveStates moveState = MoveStates.IDLE;
 
     private void Awake()
     {
+        
         pelletCount = GameObject.FindGameObjectsWithTag("pellet").Length;
     }
     // Start is called before the first frame update
@@ -87,6 +91,11 @@ public class playerController : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
 
         sr = GetComponentInChildren<SpriteRenderer>();
+    }
+
+    public void AddGameWinEventListener(UnityAction handler)
+    {
+        GameWinEvent.AddListener(handler);
     }
 
     // Handles collisions with platforms
@@ -126,6 +135,7 @@ public class playerController : MonoBehaviour
     void AllPelletsCollected()
     {
         isPaused = true;
+        GameWinEvent.Invoke();
         GameObject objectComplete = Instantiate(objComplete);
     }
     // Handles the pausing of the play in response to game paused event

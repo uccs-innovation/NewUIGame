@@ -10,6 +10,8 @@ public class Timer : MonoBehaviour
     [SerializeField]
     GameObject timerText;
 
+    float timeFinishedLevel = 0f;
+
     int tenthSecondsPassed = 0;
     int secondsPassed = 0;
 
@@ -18,6 +20,8 @@ public class Timer : MonoBehaviour
     {
         timerUI = timerText.GetComponent<TextMeshProUGUI>();
         ResetTimer();
+
+        GameObject.FindGameObjectWithTag("Player").GetComponent<playerController>().AddGameWinEventListener(HandleGameWin);
     }
 
     void ResetTimer()
@@ -26,6 +30,16 @@ public class Timer : MonoBehaviour
         StartCoroutine("TenthSecondTimer");
     }
 
+    void HandleGameWin()
+    {
+        StopCoroutine("TenthSecondTimer");
+        timeFinishedLevel = secondsPassed + (tenthSecondsPassed * .1f);
+    }
+
+    public float TimeLevelComplete
+    {
+        get { return timeFinishedLevel; }
+    }
     IEnumerator TenthSecondTimer()
     {
         yield return new WaitForSeconds(.1f);

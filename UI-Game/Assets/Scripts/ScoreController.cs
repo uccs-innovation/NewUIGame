@@ -25,4 +25,9 @@ public class ScoreController : MonoBehaviour
         score += pointsToAdd;
         scoreText.text = score.ToString();
     }
+
+    public int Score
+    {
+        get { return score; }
+    }
 }
