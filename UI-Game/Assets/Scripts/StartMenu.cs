@@ -22,9 +22,9 @@ public class StartMenu : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
-    public void OnInstructionsButtonClicked()
+    public void OnCreditsButtonClicked()
     {
-        SceneManager.LoadScene("Instructions");
+        SceneManager.LoadScene("Credits");
     }
 
     public void OnQuitButtonClicked()
