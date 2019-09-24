@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 907, y: 372}
   m_MaxSize: {x: 22002, y: 14022}
   vertical: 0
-  controlID: 4283
+  controlID: 16486
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_MinSize: {x: 632, y: 372}
   m_MaxSize: {x: 18002, y: 14022}
   vertical: 1
-  controlID: 4284
+  controlID: 16448
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_MinSize: {x: 632, y: 272}
   m_MaxSize: {x: 18002, y: 10022}
   vertical: 0
-  controlID: 4285
+  controlID: 16449
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -221,7 +221,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders: []
@@ -233,7 +233,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c6350000
     m_LastClickedID: 13766
-    m_ExpandedIDs: ffffffff00000000d6300000c8310000803200002a340000ea350000
+    m_ExpandedIDs: ffffffff00000000d4300000c63100007e32000028340000e8350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -259,9 +259,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_AssetTreeState:
     scrollPos: {x: 0, y: 21}
-    m_SelectedIDs: 
+    m_SelectedIDs: 2e910000
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000d6300000c8310000803200002a340000ea350000
+    m_ExpandedIDs: ffffffff00000000d4300000c63100007e32000028340000e8350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -286,8 +286,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 2e910000
+    m_LastClickedInstanceID: 37166
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -373,7 +373,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: ec77ffff1878ffff1e79ffff2a79ffff8ab2ffff8cfbffff7c5a00006c740000
+      m_ExpandedIDs: 227effff527effff587fffff647fffffdabcffff8cfbffffe4680000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -469,8 +469,8 @@ MonoBehaviour:
     y: 819
     width: 1506
     height: 248
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 122}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
