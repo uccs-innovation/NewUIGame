@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     bool isPaused = false;
+
+    [SerializeField]
+    GameObject instructionsPrefab;
+
+    GameObject instructions;
 
     // Instantiation of black background object
     Canvas pauseCanvas;
@@ -42,6 +48,24 @@ public class PauseMenu : MonoBehaviour
 
     public void HandleQuit()
     {
-        
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Start");
     }
+
+    public void HandleControls()
+    {
+        pauseCanvas.enabled = false;
+        instructions = Instantiate(instructionsPrefab);
+        instructions.GetComponent<InstructionsScreen>().AddHandler(ReturnHandler);
+    }
+
+    void ReturnHandler()
+    {
+        if (instructions != null)
+        {
+            Destroy(instructions);
+            pauseCanvas.enabled = true;
+        }
+    }
+
 }

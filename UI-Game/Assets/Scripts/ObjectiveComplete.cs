@@ -7,17 +7,14 @@ public class ObjectiveComplete : MonoBehaviour
 {
     private void Start()
     {
-        StartCoroutine("Timer");
+        //StartCoroutine("Timer");
+        Cursor.visible = true;
+        Time.timeScale = 0;
     }
 
-    IEnumerator Timer()
-    {
-        yield return new WaitForSeconds(3f);
-        Cursor.visible = true;
-        OnContinueButtonPressed();
-    }
     public void OnContinueButtonPressed()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Start");
     }
 }

@@ -69,7 +69,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Ambient: 0.5
-    - _Bevel: 0.292
+    - _Bevel: 0.168
     - _BevelClamp: 0
     - _BevelOffset: 0
     - _BevelRoundness: 0
