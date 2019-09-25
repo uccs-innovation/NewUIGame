@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\ghostCatcher.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\InstructionsScreen.cs" />
+    <Compile Include="Assets\Scripts\MotivatorScene.cs" />
     <Compile Include="Assets\Scripts\ObjectiveComplete.cs" />
     <Compile Include="Assets\Scripts\ObjectiveFailed.cs" />
     <Compile Include="Assets\Scripts\Pacman.cs" />

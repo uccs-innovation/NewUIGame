@@ -19,7 +19,7 @@ public class StartMenu : MonoBehaviour
 
     public void OnPlayButtonClicked()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("MotivatorScene");
     }
 
     public void OnCreditsButtonClicked()
