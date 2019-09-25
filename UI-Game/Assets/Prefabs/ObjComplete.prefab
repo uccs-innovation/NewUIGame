@@ -248,7 +248,7 @@ MonoBehaviour:
   finalScoreObject: {fileID: 1139895845465118367}
   speedBonusObject: {fileID: 1737102278577857206}
   slowTime: 120
-  fastTime: 10
+  fastTime: 20
 --- !u!1 &1139895845465118353
 GameObject:
   m_ObjectHideFlags: 0

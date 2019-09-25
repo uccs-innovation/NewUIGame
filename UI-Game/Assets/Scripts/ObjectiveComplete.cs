@@ -18,7 +18,7 @@ public class ObjectiveComplete : MonoBehaviour
     float slowTime = 120f; // In seconds
 
     [SerializeField]
-    float fastTime = 5f; // In seconds
+    float fastTime = 20f; // In seconds
 
     ScoreController scoreController;
     Timer timer;
