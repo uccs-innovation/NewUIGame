@@ -221,7 +221,7 @@ public class playerController : MonoBehaviour
                 transform.position += new Vector3(1, 0, 0) * currentHCurve.Evaluate(moveHorizontal) * translateSpeed * Time.deltaTime;
 
                 // Make necessarry vertical movement
-                rb.velocity += Vector2.down * Time.deltaTime * (firing ? 5f : 35f);
+                rb.velocity += Vector2.down * Time.deltaTime * (firing ? 0f : 35f);
 
                 // If we've landed, then switch state to IDLE
                 if (isGrounded)
