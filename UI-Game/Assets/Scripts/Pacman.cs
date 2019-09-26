@@ -5,8 +5,33 @@ using UnityEngine.Events;
 
 public class Pacman : MonoBehaviour
 {
+    // Used to check for stuck condition
+    Vector3 lastPosition;
+  
     // Event triggered whenever this pacman collides with the player
     PacmanDeathEvent pacmanDeath = new PacmanDeathEvent();
+
+    private void Start()
+    {
+        lastPosition = transform.position;
+        Reset();
+    }
+
+    private void Reset()
+    {
+        StartCoroutine(CheckStuck());
+    }
+
+    IEnumerator CheckStuck()
+    {
+        yield return new WaitForSeconds(.5f);
+        if (lastPosition == transform.position)
+        {
+            pacmanDeath.Invoke(gameObject, 0);
+        }
+        lastPosition = transform.position;
+        Reset();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,6 +46,7 @@ public class Pacman : MonoBehaviour
         {
             pacmanDeath.Invoke(gameObject, 25);
         }
+
         else return;
     }
 

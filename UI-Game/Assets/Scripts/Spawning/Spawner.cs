@@ -69,6 +69,7 @@ public class Spawner : MonoBehaviour
         SpriteRenderer[] spriteRenderers = pacman.GetComponentsInChildren<SpriteRenderer>();
         spriteRenderers[0].enabled = false;
         spriteRenderers[1].enabled = false;
+        pacman.GetComponent<CircleCollider2D>().enabled = false;
 
         pointsGranted.Invoke(pointValue);
         spawnedPacmen.Remove(pacman);

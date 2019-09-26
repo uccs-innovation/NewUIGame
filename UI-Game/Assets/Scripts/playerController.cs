@@ -7,7 +7,7 @@ public class playerController : MonoBehaviour
 {
     GameObject objCanvas;
 
-    int pelletCount;
+    //int pelletCount;
 
     public AnimationCurve accelerationCurve;
     public AnimationCurve decelerationCurve;
@@ -31,9 +31,6 @@ public class playerController : MonoBehaviour
     bool isPaused = false;
 
     float moveHorizontal;
-
-    [SerializeField]
-    GameObject objComplete;
 
     // We'll save this so that we can use it to respawn
     Vector2 startPosition;
@@ -62,21 +59,14 @@ public class playerController : MonoBehaviour
         FALLING
     }
 
-    UnityEvent GameWinEvent = new UnityEvent();
-
     bool isGrounded = true;
 
     MoveStates moveState = MoveStates.IDLE;
 
-    private void Awake()
-    {
-        
-        pelletCount = GameObject.FindGameObjectsWithTag("pellet").Length;
-    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
         // Adds this script as a listener for the event when the player falls from a platform
         ghostCatcher.AddFallenGhostListener(FallenGhostHandler);
 
@@ -97,11 +87,6 @@ public class playerController : MonoBehaviour
         sr = GetComponentInChildren<SpriteRenderer>();
     }
 
-    public void AddGameWinEventListener(UnityAction handler)
-    {
-        GameWinEvent.AddListener(handler);
-    }
-
     // Handles collisions with platforms
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -119,29 +104,12 @@ public class playerController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "pellet")
-        {
-            Destroy(collision.gameObject);
-            pelletCount--;
-            if (pelletCount <= 0)
-            {
-                AllPelletsCollected();
-            }
-            return;
-        }
         if (collision.tag == "pacman")
         {
             CollidedWithPacman();
         }
     }
 
-    // TEMPORARY!!!!!!!!!!!!!********************
-    void AllPelletsCollected()
-    {
-        isPaused = true;
-        GameWinEvent.Invoke();
-        GameObject objectComplete = Instantiate(objComplete);
-    }
     // Handles the pausing of the play in response to game paused event
     void GamePausedHandler()
     {

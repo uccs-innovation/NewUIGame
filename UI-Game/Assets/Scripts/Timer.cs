@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour
         timerUI = timerText.GetComponent<TextMeshProUGUI>();
         ResetTimer();
 
-        GameObject.FindGameObjectWithTag("Player").GetComponent<playerController>().AddGameWinEventListener(HandleGameWin);
+        GameObject.FindGameObjectWithTag("pelletController").GetComponent<PelletController>().AddGameWinEventListener(HandleGameWin);
     }
 
     void ResetTimer()

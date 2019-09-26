@@ -15,6 +15,7 @@ TagManager:
   - playerProjectile
   - scoreController
   - Timer
+  - pelletController
   layers:
   - Default
   - TransparentFX
