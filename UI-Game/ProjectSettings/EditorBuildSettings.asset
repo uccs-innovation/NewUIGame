@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MotivatorScene.unity
     guid: cd8749196798b2b4cac7e033abdc1c6f
+  - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 9eb1fb4f9735190499a9796fe55f93f3
   m_configObjects: {}
