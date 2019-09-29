@@ -51,6 +51,23 @@ public class LevelManager : MonoBehaviour
 
     string GetScene(GameObject callingObject)
     {
-        return ("MainScene");
+        LevelObject portal = FindPortal(callingObject);
+
+        return portal.sceneName;
+    }
+
+    // Finds the portal associated with a button
+    LevelObject FindPortal(GameObject button)
+    {
+        foreach (LevelObject portal in portals)
+        {
+            if (button.name == portal.name)
+            {
+                return portal;
+            }              
+        }
+
+        Debug.Log("Portal not found, please be sure to add it to list");
+        return null;
     }
 }
