@@ -65,6 +65,8 @@
     <Compile Include="Assets\Scripts\Events\PacmanDeathEvent.cs" />
     <Compile Include="Assets\Scripts\Events\PelletCollectedEvent.cs" />
     <Compile Include="Assets\Scripts\Events\PointsGrantedEvent.cs" />
+    <Compile Include="Assets\Scripts\Levels\Level.cs" />
+    <Compile Include="Assets\Scripts\Levels\LevelObject.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Menus\PauseMenu.cs" />

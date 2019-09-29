@@ -47,6 +47,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
@@ -126,6 +127,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9574}
     - Class: 114
       Script: {instanceID: 9580}
+    - Class: 114
+      Script: {instanceID: 9582}
     - Class: 114
       Script: {instanceID: 9588}
     - Class: 114
@@ -1244,6 +1247,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 361314db948d46f4946d94da76c9bed6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Level
   platform: 19
   scenePathNames:
   - Assets/Scenes/Start.unity
