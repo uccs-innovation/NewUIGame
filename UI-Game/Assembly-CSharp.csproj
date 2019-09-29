@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\player\Health.cs" />
     <Compile Include="Assets\Scripts\player\playerController.cs" />
     <Compile Include="Assets\Scripts\player\PlayerProjectile.cs" />
+    <Compile Include="Assets\Scripts\Portal\AvailablePortals.cs" />
     <Compile Include="Assets\Scripts\Scenes\CreditsScreen.cs" />
     <Compile Include="Assets\Scripts\Scenes\InstructionsScreen.cs" />
     <Compile Include="Assets\Scripts\Scenes\MotivatorScene.cs" />

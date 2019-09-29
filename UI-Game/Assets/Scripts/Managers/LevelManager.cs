@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
@@ -16,18 +17,28 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     GameObject portalPanel;
 
-    List<ScriptableObject> portals;
+    List<LevelObject> portals;
 
     private void Start()
     {
-        GameObject pbutton = Instantiate(portalButton, portalPanel.transform);
-        pbutton.name = "lvl_1";
-        pbutton.GetComponent<Button>().onClick.AddListener(OnLevelSelected);
+        portals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>().GetPortals();
 
-        GameObject button = Instantiate(placeholder, portalPanel.transform);
-        button.name = "lvl_2";
-        button.GetComponent<Button>().onClick.AddListener(OnLevelSelected);
+        PopulateButtons();
+
     }
+
+    void PopulateButtons()
+    {
+        // Levels and portals are the same thing
+        foreach (LevelObject portal in portals)
+        {
+            GameObject button = Instantiate(portalButton, portalPanel.transform);
+            button.name = portal.name;
+            button.GetComponentInChildren<TextMeshProUGUI>().text = portal.levelName;
+            button.GetComponent<Button>().onClick.AddListener(OnLevelSelected);
+        }
+    }
+
     public void OnLevelSelected()
     {
         // Get a reference to the currently selected button

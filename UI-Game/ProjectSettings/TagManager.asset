@@ -16,6 +16,7 @@ TagManager:
   - scoreController
   - Timer
   - pelletController
+  - availablePortals
   layers:
   - Default
   - TransparentFX
