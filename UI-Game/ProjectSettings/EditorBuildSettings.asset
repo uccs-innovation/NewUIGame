@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelSelect.unity
     guid: 9eb1fb4f9735190499a9796fe55f93f3
+  - enabled: 1
+    path: Assets/Scenes/PortalAwarded.unity
+    guid: e312eb822ed18fd4f96a9a3d7812dc43
+  - enabled: 1
+    path: Assets/Scenes/DungeonOfFear.unity
+    guid: 93a7b89c5cb876b41b4f045f9d26882f
   m_configObjects: {}

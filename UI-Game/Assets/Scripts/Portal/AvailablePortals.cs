@@ -11,6 +11,9 @@ public class AvailablePortals : SingletonBehavior<AvailablePortals>
     // The list of portals that the player has been rewarded
     List<LevelObject> availablePortals = new List<LevelObject>();
 
+    // The active portal that the player is currently in
+    LevelObject activePortal;
+
     private void Start()
     {
         // If there are no available portals for the player, then let's give him the first one off the list
@@ -20,7 +23,7 @@ public class AvailablePortals : SingletonBehavior<AvailablePortals>
         }
     }
 
-    public void AddPortal(LevelObject portal)
+    public void AwardPortal(LevelObject portal)
     {
         availablePortals.Add(portal);
     }
@@ -29,4 +32,11 @@ public class AvailablePortals : SingletonBehavior<AvailablePortals>
     {
         return availablePortals;
     }
+
+    public LevelObject ActivePortal
+    {
+        get { return activePortal; }
+        set { activePortal = value; }
+    }
+       
 }

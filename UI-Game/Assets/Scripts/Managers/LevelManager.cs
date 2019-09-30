@@ -19,12 +19,14 @@ public class LevelManager : MonoBehaviour
 
     List<LevelObject> portals;
 
+    AvailablePortals availablePortals;
+
     private void Start()
     {
-        portals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>().GetPortals();
+        availablePortals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>();
+        portals = availablePortals.GetPortals();
 
         PopulateButtons();
-
     }
 
     void PopulateButtons()
@@ -44,17 +46,16 @@ public class LevelManager : MonoBehaviour
         // Get a reference to the currently selected button
         GameObject callingButton = EventSystem.current.currentSelectedGameObject;
 
-        string sceneToLoad = GetScene(callingButton);
+        // The portal that the player selected to enter
+        LevelObject currentPortal = FindPortal(callingButton);
 
-        SceneManager.LoadScene(sceneToLoad);
+        // Set portal as active in singleton availablePortals object
+        availablePortals.ActivePortal = currentPortal;
+
+        // Change the scene 
+        SceneManager.LoadScene(currentPortal.sceneName);
     }
 
-    string GetScene(GameObject callingObject)
-    {
-        LevelObject portal = FindPortal(callingObject);
-
-        return portal.sceneName;
-    }
 
     // Finds the portal associated with a button
     LevelObject FindPortal(GameObject button)

@@ -16,3 +16,6 @@ MonoBehaviour:
   sprite: {fileID: 0}
   sceneName: MainScene
   descrText: The new ghost's first purge
+  requiredSpeedBonus: 100
+  requiredScore: 1000
+  reward: {fileID: 11400000, guid: 64f62bdf6072294488c2175fe3689d3c, type: 2}

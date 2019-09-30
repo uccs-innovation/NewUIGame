@@ -23,6 +23,12 @@ public class ObjectiveComplete : MonoBehaviour
     ScoreController scoreController;
     Timer timer;
 
+    // Score from killing pacmen
+    int rawScore = 0;
+
+    // Extra points awarded for clearning the level quickly
+    int speedBonus = 0;
+
     private void Start()
     {
         scoreController = GameObject.FindGameObjectWithTag("scoreController").GetComponent<ScoreController>();
@@ -35,10 +41,10 @@ public class ObjectiveComplete : MonoBehaviour
 
     void DisplayFinalScore()
     {
-        int rawScore = scoreController.Score;
+        rawScore = scoreController.Score;
         float time = timer.TimeLevelComplete;
 
-        int speedBonus = CalculateSpeedBonus(time);
+        speedBonus = CalculateSpeedBonus(time);
         int finalScore = CalculateFinalScore(rawScore, speedBonus);
         speedBonusObject.text = "+" + speedBonus + " speed bonus!";
         finalScoreObject.text = "Score: " + finalScore.ToString();
@@ -59,7 +65,29 @@ public class ObjectiveComplete : MonoBehaviour
 
     public void OnContinueButtonPressed()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("Start");
+        // Here we'll check to see if the player should be awarded the next portal
+        if (NextPortalAwarded())
+        {
+            SceneManager.LoadScene("PortalAwarded");
+
+        }
+        else
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene("Start");
+        }
+    }
+
+    bool NextPortalAwarded()
+    {
+        LevelObject currentPortal = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>().ActivePortal;
+        if (rawScore >= currentPortal.requiredScore && speedBonus >= currentPortal.requiredSpeedBonus)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }      
     }
 }
