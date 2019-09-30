@@ -138,7 +138,7 @@ public class playerController : MonoBehaviour
         int flipped = isFlipped ? -1 : 1;
 
         GameObject projectile = Instantiate(energyBurst, 
-            new Vector3(transform.position.x + flipped * .3f, transform.position.y + .25f, 0f), Quaternion.identity, null);
+            new Vector3(transform.position.x + flipped * .36f, transform.position.y + .24f, 0f), Quaternion.identity, null);
 
         projectile.GetComponent<Rigidbody2D>().AddForce(Vector2.right * projectileForce * flipped, ForceMode2D.Impulse);
         StartCoroutine("FireDelayTimer");
