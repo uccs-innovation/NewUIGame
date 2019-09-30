@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31620be8939df4e48bff16f93bff02be, type: 3}
   m_Name: lvl_1
   m_EditorClassIdentifier: 
-  levelName: Introduction to Purgatory
+  levelName: The Purge Begins
   sprite: {fileID: 0}
   sceneName: MainScene
   descrText: The new ghost's first purge

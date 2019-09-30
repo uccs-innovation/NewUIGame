@@ -24,6 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/PortalAwarded.unity
     guid: e312eb822ed18fd4f96a9a3d7812dc43
   - enabled: 1
-    path: Assets/Scenes/DungeonOfFear.unity
+    path: Assets/Scenes/ValleyOfAfterlife.unity
     guid: 93a7b89c5cb876b41b4f045f9d26882f
   m_configObjects: {}

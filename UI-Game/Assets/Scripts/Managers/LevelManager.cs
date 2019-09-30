@@ -39,6 +39,14 @@ public class LevelManager : MonoBehaviour
             button.GetComponentInChildren<TextMeshProUGUI>().text = portal.levelName;
             button.GetComponent<Button>().onClick.AddListener(OnLevelSelected);
         }
+
+        // Fill the row (if needed) for asthetic value
+        if (portals.Count >= 5) return;
+
+        for (int i = 0; i < (5 - portals.Count); i++)
+        {
+            Instantiate(placeholder, portalPanel.transform);
+        }
     }
 
     public void OnLevelSelected()

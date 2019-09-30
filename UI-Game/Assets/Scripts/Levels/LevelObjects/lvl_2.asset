@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31620be8939df4e48bff16f93bff02be, type: 3}
   m_Name: lvl_2
   m_EditorClassIdentifier: 
-  levelName: Dungeon of Fear
+  levelName: Valley of the Afterlife
   sprite: {fileID: 0}
-  sceneName: DungeonOfFear
-  descrText: The culmination of all your fears
+  sceneName: ValleyOfAfterlife
+  descrText: Where you don't want to be
   requiredSpeedBonus: 100
   requiredScore: 1000
   reward: {fileID: 0}

@@ -81,7 +81,8 @@ public class ObjectiveComplete : MonoBehaviour
     bool NextPortalAwarded()
     {
         LevelObject currentPortal = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>().ActivePortal;
-        if (rawScore >= currentPortal.requiredScore && speedBonus >= currentPortal.requiredSpeedBonus)
+        if (rawScore >= currentPortal.requiredScore && speedBonus >= currentPortal.requiredSpeedBonus
+            && currentPortal.reward != null) // CHANGE THIS LATER!!!!! Player will beat game whenever reward == null
         {
             return true;
         }
