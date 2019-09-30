@@ -454,9 +454,9 @@ MonoBehaviour:
     type: 3}
   greenPacmanPrefab: {fileID: 1659473406002310012, guid: 452b549322cc9344a81b938162fe8d20,
     type: 3}
-  maxEnemiesSpawned: 8
-  minSpawnDelay: 1
-  maxSpawnDelay: 2
+  maxEnemiesSpawned: 12
+  minSpawnDelay: 0.5
+  maxSpawnDelay: 1
   spawnPoints:
   - {fileID: 1642074672}
   - {fileID: 557012752}
@@ -2386,7 +2386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1043790737
 Transform:
   m_ObjectHideFlags: 0

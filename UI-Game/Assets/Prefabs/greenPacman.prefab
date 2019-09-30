@@ -177,6 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75d6af7f7e9ff3439802113b9d33f5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pacmanExplosion: {fileID: 4334566616874609691, guid: f92090d2f7e060641af5e0334d8d4e32,
+    type: 3}
 --- !u!58 &1700014805334953714
 CircleCollider2D:
   m_ObjectHideFlags: 0

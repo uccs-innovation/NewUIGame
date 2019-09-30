@@ -7,7 +7,11 @@ public class Pacman : MonoBehaviour
 {
     // Used to check for stuck condition
     Vector3 lastPosition;
-  
+
+    // Explosion effect
+    [SerializeField]
+    GameObject pacmanExplosion;
+
     // Event triggered whenever this pacman collides with the player
     PacmanDeathEvent pacmanDeath = new PacmanDeathEvent();
 
@@ -38,12 +42,16 @@ public class Pacman : MonoBehaviour
         // If we've been hit by one of the player's projectiles, then let your subscribers know
         if (collision.tag == "playerProjectile")
         {
+            GameObject explosion = Instantiate(pacmanExplosion, null);
+            explosion.transform.position = transform.position;
             pacmanDeath.Invoke(gameObject, 100);
         }
 
         // If we've collided with the player
         else if (collision.tag == "Player")
         {
+            GameObject explosion = Instantiate(pacmanExplosion, null);
+            explosion.transform.position = transform.position;
             pacmanDeath.Invoke(gameObject, 25);
         }
 
