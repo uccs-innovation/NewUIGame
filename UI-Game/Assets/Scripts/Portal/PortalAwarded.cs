@@ -9,6 +9,9 @@ public class PortalAwarded : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI portalAwardedMessage;
 
+    [SerializeField]
+    TextMeshProUGUI rewardButton;
+
     AvailablePortals availablePortals;
 
     // Start is called before the first frame update
@@ -16,14 +19,16 @@ public class PortalAwarded : MonoBehaviour
     {
         // Get reference to availablePortals singlton object
         availablePortals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>();
-
+        
         // Get a reference to the reward for finishing the current level
         LevelObject newPortal = availablePortals.ActivePortal.reward;
+
+        // Place portal name in rewardButton
+        rewardButton.text = newPortal.levelName;
 
         // Add the new portal to the available portals
         availablePortals.AwardPortal(newPortal);
 
-        portalAwardedMessage.text = ("'" + newPortal.levelName + "' added to your collection");
     }
 
     public void OnContinueButtonPressed()

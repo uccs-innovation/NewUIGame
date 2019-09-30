@@ -42,6 +42,8 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -94,113 +96,6 @@ ScriptsOnlyBuild:
     - Class: 128
       Script: {instanceID: 0}
     - Class: 157
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/Scenes/DungeonOfFear.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 50
-      Script: {instanceID: 0}
-    - Class: 58
-      Script: {instanceID: 0}
-    - Class: 61
-      Script: {instanceID: 0}
-    - Class: 62
-      Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 111
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 9268}
-    - Class: 114
-      Script: {instanceID: 9284}
-    - Class: 114
-      Script: {instanceID: 9568}
-    - Class: 114
-      Script: {instanceID: 9570}
-    - Class: 114
-      Script: {instanceID: 9576}
-    - Class: 114
-      Script: {instanceID: 9582}
-    - Class: 114
-      Script: {instanceID: 9590}
-    - Class: 114
-      Script: {instanceID: 9626}
-    - Class: 114
-      Script: {instanceID: 9844}
-    - Class: 114
-      Script: {instanceID: 9898}
-    - Class: 114
-      Script: {instanceID: 10046}
-    - Class: 114
-      Script: {instanceID: 10122}
-    - Class: 114
-      Script: {instanceID: 10162}
-    - Class: 114
-      Script: {instanceID: 10438}
-    - Class: 114
-      Script: {instanceID: 10458}
-    - Class: 114
-      Script: {instanceID: 10460}
-    - Class: 114
-      Script: {instanceID: 10790}
-    - Class: 114
-      Script: {instanceID: 10908}
-    - Class: 114
-      Script: {instanceID: 11206}
-    - Class: 114
-      Script: {instanceID: 11262}
-    - Class: 114
-      Script: {instanceID: 11316}
-    - Class: 114
-      Script: {instanceID: 11336}
-    - Class: 114
-      Script: {instanceID: 11360}
-    - Class: 114
-      Script: {instanceID: 11588}
-    - Class: 114
-      Script: {instanceID: 11640}
-    - Class: 114
-      Script: {instanceID: 12006}
-    - Class: 114
-      Script: {instanceID: 12298}
-    - Class: 114
-      Script: {instanceID: 12396}
-    - Class: 114
-      Script: {instanceID: 12470}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -516,6 +411,113 @@ ScriptsOnlyBuild:
     - Class: 128
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/ValleyOfAfterlife.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 62
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9268}
+    - Class: 114
+      Script: {instanceID: 9284}
+    - Class: 114
+      Script: {instanceID: 9568}
+    - Class: 114
+      Script: {instanceID: 9570}
+    - Class: 114
+      Script: {instanceID: 9576}
+    - Class: 114
+      Script: {instanceID: 9582}
+    - Class: 114
+      Script: {instanceID: 9590}
+    - Class: 114
+      Script: {instanceID: 9626}
+    - Class: 114
+      Script: {instanceID: 9844}
+    - Class: 114
+      Script: {instanceID: 9898}
+    - Class: 114
+      Script: {instanceID: 10046}
+    - Class: 114
+      Script: {instanceID: 10122}
+    - Class: 114
+      Script: {instanceID: 10162}
+    - Class: 114
+      Script: {instanceID: 10438}
+    - Class: 114
+      Script: {instanceID: 10458}
+    - Class: 114
+      Script: {instanceID: 10460}
+    - Class: 114
+      Script: {instanceID: 10790}
+    - Class: 114
+      Script: {instanceID: 10908}
+    - Class: 114
+      Script: {instanceID: 11206}
+    - Class: 114
+      Script: {instanceID: 11262}
+    - Class: 114
+      Script: {instanceID: 11316}
+    - Class: 114
+      Script: {instanceID: 11336}
+    - Class: 114
+      Script: {instanceID: 11360}
+    - Class: 114
+      Script: {instanceID: 11588}
+    - Class: 114
+      Script: {instanceID: 11640}
+    - Class: 114
+      Script: {instanceID: 12006}
+    - Class: 114
+      Script: {instanceID: 12298}
+    - Class: 114
+      Script: {instanceID: 12396}
+    - Class: 114
+      Script: {instanceID: 12470}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -1038,7 +1040,7 @@ ScriptsOnlyBuild:
     className: Health
   - hash:
       serializedVersion: 2
-      Hash: 1d928fd5af27b55379cae72826f161af
+      Hash: b73b76bfc49edf477002eaca90ef225f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PortalAwarded
@@ -1434,5 +1436,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MotivatorScene.unity
   - Assets/Scenes/LevelSelect.unity
   - Assets/Scenes/PortalAwarded.unity
-  - Assets/Scenes/DungeonOfFear.unity
+  - Assets/Scenes/ValleyOfAfterlife.unity
   playerPath: C:/Users/crede/Desktop/HoppyGhost/UI-Game.exe

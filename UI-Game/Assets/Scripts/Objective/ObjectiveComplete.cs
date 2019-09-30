@@ -23,6 +23,8 @@ public class ObjectiveComplete : MonoBehaviour
     ScoreController scoreController;
     Timer timer;
 
+    AvailablePortals availablePortals;
+
     // Score from killing pacmen
     int rawScore = 0;
 
@@ -31,6 +33,7 @@ public class ObjectiveComplete : MonoBehaviour
 
     private void Start()
     {
+        availablePortals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>();
         scoreController = GameObject.FindGameObjectWithTag("scoreController").GetComponent<ScoreController>();
         timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
         Cursor.visible = true;
@@ -80,9 +83,17 @@ public class ObjectiveComplete : MonoBehaviour
 
     bool NextPortalAwarded()
     {
-        LevelObject currentPortal = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>().ActivePortal;
+        LevelObject currentPortal = availablePortals.ActivePortal;
+
+        // This means that the player has beaten the game
+        if (currentPortal.reward == null)
+        {
+            // CHANGE THIS LATER....PLAYER HAS BEATEN THE GAME!
+            return false;
+        }
+
         if (rawScore >= currentPortal.requiredScore && speedBonus >= currentPortal.requiredSpeedBonus
-            && currentPortal.reward != null) // CHANGE THIS LATER!!!!! Player will beat game whenever reward == null
+            && !availablePortals.GetPortals().Contains(currentPortal.reward)) 
         {
             return true;
         }
