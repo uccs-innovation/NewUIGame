@@ -154,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 70.5, y: -127.20001}
-  m_SizeDelta: {x: 754.7, y: 111}
+  m_AnchoredPosition: {x: 70.5, y: -91.6}
+  m_SizeDelta: {x: 754.7, y: 39.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &390449981
 MonoBehaviour:
@@ -190,8 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "https://www.1001fonts.com/casper-font.html\r\nAll other art and animations
-    were created using Inkscape, Krita, and Gimp"
+  m_Text: "https://www.1001fonts.com/casper-font.html\r"
 --- !u!222 &390449982
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -296,6 +295,7 @@ RectTransform:
   - {fileID: 1237625605}
   - {fileID: 1722641688}
   - {fileID: 390449980}
+  - {fileID: 1672481481}
   m_Father: {fileID: 2082591270}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -361,7 +361,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "https://www.1001fonts.com/casper-font.html\r\nAll other art and animations
+  m_text: "https://www.1001fonts.com/casper-font.html\r\n\nAll other art and animations
     were created using Inkscape, Krita, and Gimp"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -676,7 +676,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -1, y: 123.79999}
+  m_AnchoredPosition: {x: -1, y: 71}
   m_SizeDelta: {x: 160.96, y: 80.29999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1237625606
@@ -838,6 +838,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1672481480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1672481481}
+  - component: {fileID: 1672481483}
+  - component: {fileID: 1672481482}
+  m_Layer: 5
+  m_Name: Text (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1672481481
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672481480}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 822855035}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -6.75, y: -175}
+  m_SizeDelta: {x: 909.2, y: 111}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1672481482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672481480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 27
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'A* Pathfinding system developed while following this youtube video: https://www.youtube.com/watch?v=mZfyt03LDH4&list=PLFt_AvWsXl0cq5Umv3pMC9SPnKjfp9eGW&index=3'
+--- !u!222 &1672481483
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672481480}
+  m_CullTransparentMesh: 0
 --- !u!1 &1720733255
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,8 +1034,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.54, y: -18.2}
-  m_SizeDelta: {x: 932.3, y: 374.4}
+  m_AnchoredPosition: {x: -6.75, y: -46}
+  m_SizeDelta: {x: 909.2, y: 399}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1722641689
 MonoBehaviour:
@@ -991,28 +1070,21 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Performance metric is the combination of points aquired by killing pacmen
-    and a speed bonus.
-
-    Speed bonus = (1 - ((time - fastTime)/(slowTime - fastTime)) * multiplier
-
-    where time is the player''s time to complete the level
-
-    and fastTime is a heuristic value in seconds set to 15
-
-    and slowTime is a heuristic value in second set to 120
-
-    and multiplier is set to 1000
+  m_Text: '"Cinemachine" Unity Asset used for camera follow
 
 
-    Renewable resource is a healthbar over the ghost''s head.
-
-    The ghost loses health upon collisions with pacmen.
-
-    The ghost regenerates health over time.
+    All art, animations, and particle systems made by Chad Credeur.
 
 
-'
+    List of selectable items: When the player meets the win conditions for a level,
+    they''re awarded an ascension portal that''s used to access new game levels. ***In
+    this version the player only needs to kill 3 pacmen and collect all pellets in
+    order to be awarded the portal to the next level***
+
+
+    Overview feature: The player is able to navigate to each of the game levels using
+    the portals they''ve been rewarded. The level select screen appears after pressing
+    "Play" at the title screen. '
 --- !u!222 &1722641690
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Managers\ParticleSystemHandler.cs" />
+    <Compile Include="Assets\Scripts\Menus\Instructions.cs" />
     <Compile Include="Assets\Scripts\Menus\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\StartMenu.cs" />
     <Compile Include="Assets\Scripts\Objective\ObjectiveComplete.cs" />
@@ -90,7 +91,7 @@
     <Compile Include="Assets\Scripts\Portal\AvailablePortals.cs" />
     <Compile Include="Assets\Scripts\Portal\PortalAwarded.cs" />
     <Compile Include="Assets\Scripts\Scenes\CreditsScreen.cs" />
-    <Compile Include="Assets\Scripts\Scenes\InstructionsScreen.cs" />
+    <Compile Include="Assets\Scripts\Scenes\InstructionsScene.cs" />
     <Compile Include="Assets\Scripts\Scenes\MotivatorScene.cs" />
     <Compile Include="Assets\Scripts\Score\ScoreController.cs" />
     <Compile Include="Assets\Scripts\Singleton\SingletonBehavior.cs" />
