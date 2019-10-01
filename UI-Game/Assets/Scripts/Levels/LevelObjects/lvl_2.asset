@@ -16,6 +16,6 @@ MonoBehaviour:
   sprite: {fileID: 0}
   sceneName: ValleyOfAfterlife
   descrText: Where you don't want to be
-  requiredSpeedBonus: 100
-  requiredScore: 1000
-  reward: {fileID: 0}
+  requiredSpeedBonus: 0
+  requiredScore: 300
+  reward: {fileID: 11400000, guid: 29bc5ce5bfdbcf749b88aef2785488df, type: 2}

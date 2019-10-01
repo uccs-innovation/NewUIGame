@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Instructions.unity
     guid: 20dfa28509c854d4a9fe0e83980fb536
+  - enabled: 1
+    path: Assets/Scenes/StairwayToNothing.unity
+    guid: ff289bb0d215471439e628a57c75f478
   m_configObjects: {}
