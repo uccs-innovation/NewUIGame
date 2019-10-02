@@ -12,11 +12,14 @@ public class Pacman : MonoBehaviour
     [SerializeField]
     GameObject pacmanExplosion;
 
+    AudioSource explosionSound;
+
     // Event triggered whenever this pacman collides with the player
     PacmanDeathEvent pacmanDeath = new PacmanDeathEvent();
 
     private void Start()
     {
+        explosionSound = gameObject.GetComponent<AudioSource>();
         lastPosition = transform.position;
         Reset();
     }
@@ -42,6 +45,7 @@ public class Pacman : MonoBehaviour
         // If we've been hit by one of the player's projectiles, then let your subscribers know
         if (collision.tag == "playerProjectile")
         {
+            explosionSound.Play();
             GameObject explosion = Instantiate(pacmanExplosion, null);
             explosion.transform.position = transform.position;
             pacmanDeath.Invoke(gameObject, 100);
@@ -50,6 +54,7 @@ public class Pacman : MonoBehaviour
         // If we've collided with the player
         else if (collision.tag == "Player")
         {
+            explosionSound.Play();
             GameObject explosion = Instantiate(pacmanExplosion, null);
             explosion.transform.position = transform.position;
             pacmanDeath.Invoke(gameObject, 25);
