@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 394}
   m_MaxSize: {x: 22012, y: 14044}
   vertical: 0
-  controlID: 11931
+  controlID: 5289
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 640, y: 394}
   m_MaxSize: {x: 18010, y: 14044}
   vertical: 1
-  controlID: 11932
+  controlID: 5267
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 640, y: 272}
   m_MaxSize: {x: 18010, y: 10022}
   vertical: 0
-  controlID: 11933
+  controlID: 5268
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -416,7 +416,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Materials
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders: []
@@ -428,7 +428,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c6350000
     m_LastClickedID: 13766
-    m_ExpandedIDs: ffffffff00000000b63700007c390000d4390000ba3b0000b03c0000
+    m_ExpandedIDs: ffffffff000000009a370000c83700009a380000ba390000463a0000983c00008c450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -456,7 +456,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000b63700007c390000d4390000ba3b0000b03c0000
+    m_ExpandedIDs: ffffffff000000009a370000c83700009a380000ba390000463a0000983c00008c450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -540,9 +540,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: c6370000
       m_LastClickedID: 0
-      m_ExpandedIDs: 2668fdff5268fdff8c6bfdffa06bfdff786dfdff9e6dfdffb26dfdffc46dfdffda6dfdff0470fdff1c70fdffc485fdfff085fdff2089fdff2a89fdfff88afdff148bfdff1e8bfdff268bfdff328bfdff528dfdff688dfdffbeb2fdff3eb5fdff440cfeff700cfeffa00ffeffaa0ffeff7811feff9411feff9e11feffa611feffb211feffcc13feffda13feff3c20feff6820feffa423feffba23feff9425feffbc25feffd225feffe625fefffe25feff2428feff3e28feffea2ffeff1630feff5233feff6833feff4235feff6a35feff8035feff9435feffac35feffd037feffea37fefff683feff2284feff5e87feff7487feff4e89feff7689feff8c89feffa089feffb889feffdc8bfefff68bfeffb4b7feffe0b7feff1cbbfeff32bbfeff0cbdfeff34bdfeff4abdfeff5ebdfeff76bdfeff9abffeffb4bffeff0810ffff1412ffff1814ffff4a16ffff661fffff4622ffffbc51ffff3054ffff5854ffffb69affffe69affff229effff409effff1aa0ffff4aa0ffff68a0ffff84a0ffffa4a0ffffcaa2ffffeca2ffffc2a6ffffeea6ffff24aaffff3caaffff10acffff3aacffff52acffff68acffff82acffffa2aeffffbeaeffff0ad4ffff7afbffff
+      m_ExpandedIDs: 8a24feffb624feffea27fefff827feffca29feffea29fefff829feff042afeff142afeff322cfeff442cfeff1e6efeff4a6efeff7e71feff8c71feff5e73feff7e73feff8c73feff9873feffa873feffc675feffd875feff36a7feff60a7feff5ca9feff68a9feff3aabfeff58abfeff62abfeff6cabfeff78abfeff6aadfeff7cadfefff6adfeff22aefeff56b1feff64b1feff36b3feff56b3feff64b3feff70b3feff80b3feff9eb5feffb0b5feff6adfffff96dfffffc6e2ffffd0e2ffff9ee4ffffbae4ffffc4e4ffffcce4ffffd8e4fffff2e6ffff00e7ffff0cf9ffff3cfbffff8cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

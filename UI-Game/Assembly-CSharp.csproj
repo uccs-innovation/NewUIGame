@@ -95,6 +95,7 @@
     <Compile Include="Assets\Scripts\Scenes\MotivatorScene.cs" />
     <Compile Include="Assets\Scripts\Score\ScoreController.cs" />
     <Compile Include="Assets\Scripts\Singleton\SingletonBehavior.cs" />
+    <Compile Include="Assets\Scripts\Sound\BackgroundMusic.cs" />
     <Compile Include="Assets\Scripts\Spawning\Spawner.cs" />
     <Compile Include="Assets\Scripts\Timer\Timer.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
