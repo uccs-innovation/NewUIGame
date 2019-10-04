@@ -660,7 +660,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Ghost Grinder
+  m_text: Portal Playlist
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 86c021018a8f1d0448a78c5a83dc1861, type: 2}
   m_sharedMaterial: {fileID: -8413980882236509724, guid: 86c021018a8f1d0448a78c5a83dc1861,
@@ -727,10 +727,10 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 122.79622, y: 48.0932, z: 57.53882, w: -20.480011}
+  m_margin: {x: 50.139435, y: 48.0932, z: -20.46045, w: -20.480011}
   m_textInfo:
     textComponent: {fileID: 1089639764}
-    characterCount: 13
+    characterCount: 15
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
@@ -1397,7 +1397,7 @@ GameObject:
   - component: {fileID: 2026897635}
   - component: {fileID: 2026897634}
   m_Layer: 5
-  m_Name: Ghost Grinder
+  m_Name: Portal Playlist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1420,8 +1420,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.4, y: -2}
-  m_SizeDelta: {x: 508.4, y: 80.3}
+  m_AnchoredPosition: {x: 0, y: -2}
+  m_SizeDelta: {x: 559.7, y: 80.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2026897634
 MonoBehaviour:
@@ -1467,7 +1467,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1349259523}
-        m_MethodName: OnGhostGrinderModeSelected
+        m_MethodName: OnPortalPlaylistModeSelected
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

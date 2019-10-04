@@ -10,7 +10,7 @@ public class PlaymodeSelect : MonoBehaviour
         SceneManager.LoadScene("LevelSelect");
     }
 
-    public void OnGhostGrinderModeSelected()
+    public void OnPortalPlaylistModeSelected()
     {
 
     }
