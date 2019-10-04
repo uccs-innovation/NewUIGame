@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StairwayToNothing.unity
     guid: ff289bb0d215471439e628a57c75f478
+  - enabled: 1
+    path: Assets/Scenes/PlaymodeSelect.unity
+    guid: 5b4431605d502814e86b464052879cf5
   m_configObjects: {}

@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Managers\ParticleSystemHandler.cs" />
     <Compile Include="Assets\Scripts\Menus\Instructions.cs" />
     <Compile Include="Assets\Scripts\Menus\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Menus\PlaymodeSelect.cs" />
     <Compile Include="Assets\Scripts\Menus\StartMenu.cs" />
     <Compile Include="Assets\Scripts\Objective\ObjectiveComplete.cs" />
     <Compile Include="Assets\Scripts\Objective\ObjectiveFailed.cs" />
