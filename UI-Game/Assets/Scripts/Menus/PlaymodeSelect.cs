@@ -10,8 +10,13 @@ public class PlaymodeSelect : MonoBehaviour
         SceneManager.LoadScene("LevelSelect");
     }
 
-    public void OnGhitGhudModeSelected()
+    public void OnGhostGrinderModeSelected()
     {
 
+    }
+
+    public void OnBackSelected()
+    {
+        SceneManager.LoadScene("Start");
     }
 }
