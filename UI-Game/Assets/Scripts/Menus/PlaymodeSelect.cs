@@ -12,7 +12,7 @@ public class PlaymodeSelect : MonoBehaviour
 
     public void OnPortalPlaylistModeSelected()
     {
-
+        SceneManager.LoadScene("PlaylistSelect");
     }
 
     public void OnBackSelected()
