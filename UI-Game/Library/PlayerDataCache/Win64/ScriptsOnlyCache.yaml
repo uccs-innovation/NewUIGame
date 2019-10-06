@@ -61,7 +61,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.GridLayoutGroup
-    - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
@@ -321,7 +320,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12756}
     - Class: 114
-      Script: {instanceID: 17636}
+      Script: {instanceID: 17032}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -413,7 +412,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9614}
     - Class: 114
-      Script: {instanceID: 9618}
+      Script: {instanceID: 9616}
     - Class: 114
       Script: {instanceID: 9622}
     - Class: 114
@@ -642,7 +641,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12756}
     - Class: 114
-      Script: {instanceID: 17636}
+      Script: {instanceID: 17032}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -840,7 +839,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12756}
     - Class: 114
-      Script: {instanceID: 17636}
+      Script: {instanceID: 17032}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
