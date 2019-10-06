@@ -94,4 +94,9 @@ public class PlaylistManager : MonoBehaviour
         dragItem.GetComponent<Image>().raycastTarget = false;
     }
 
+    public void Drop()
+    {
+        Debug.Log("drop");
+    }
+
 }
