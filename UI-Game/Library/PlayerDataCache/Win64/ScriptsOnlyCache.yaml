@@ -320,7 +320,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12756}
     - Class: 114
-      Script: {instanceID: 21054}
+      Script: {instanceID: 24208}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -641,7 +641,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12756}
     - Class: 114
-      Script: {instanceID: 21054}
+      Script: {instanceID: 24208}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -839,7 +839,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12756}
     - Class: 114
-      Script: {instanceID: 21054}
+      Script: {instanceID: 24208}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1979,7 +1979,7 @@ ScriptsOnlyBuild:
     className: ObjectiveComplete
   - hash:
       serializedVersion: 2
-      Hash: 721c914a378bb889701d3bd20d35bcf3
+      Hash: a699d0f270cf474c3793f672e894e3d3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlaylistManager

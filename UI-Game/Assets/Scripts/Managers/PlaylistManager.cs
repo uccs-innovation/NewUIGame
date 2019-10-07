@@ -16,12 +16,19 @@ public class PlaylistManager : MonoBehaviour
     [SerializeField]
     GameObject portalPanel;
 
+    [SerializeField]
+    GameObject playlistPanel;
+
     List<LevelObject> portals;
 
     AvailablePortals availablePortals;
 
     public GameObject dragItem;
+    GameObject dropItem;
+
     public Canvas dragCanvas;
+
+    Dictionary<GameObject, LevelObject> portalDict = new Dictionary<GameObject, LevelObject>();
 
     private void Start()
     {
@@ -88,6 +95,7 @@ public class PlaylistManager : MonoBehaviour
     public void StartDrag(GameObject selectedObject)
     {
         dragItem = Instantiate(selectedObject, Input.mousePosition, selectedObject.transform.rotation) as GameObject;
+        //dragItem.GetComponent<Button>().enabled = false;
         dragItem.transform.SetParent(dragCanvas.transform);
         dragItem.GetComponent<Image>().SetNativeSize();
         dragItem.transform.localScale = 1.1f * dragItem.transform.localScale;
@@ -96,7 +104,9 @@ public class PlaylistManager : MonoBehaviour
 
     public void Drop()
     {
-        Debug.Log("drop");
+        GameObject droppedItem = Instantiate(dragablePortal, playlistPanel.transform);
+        droppedItem.transform.SetAsFirstSibling();
+        droppedItem.GetComponentInChildren<TextMeshProUGUI>().text = dragItem.GetComponentInChildren<TextMeshProUGUI>().text;
     }
 
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4538349585619835980}
   - component: {fileID: 4538349585619835981}
   - component: {fileID: 4302375575072347949}
-  - component: {fileID: 83473683050333401}
+  - component: {fileID: 6421125582106438678}
   m_Layer: 5
   m_Name: portalButtonDrag
   m_TagString: Untagged
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
---- !u!114 &83473683050333401
+--- !u!114 &6421125582106438678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
