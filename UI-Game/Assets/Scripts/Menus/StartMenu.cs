@@ -24,4 +24,9 @@ public class StartMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void OnOptionsClicked()
+    {
+        SceneManager.LoadScene("Options");
+    }
 }

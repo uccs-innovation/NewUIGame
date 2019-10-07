@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Managers\PlaylistManager.cs" />
     <Compile Include="Assets\Scripts\Menus\DragAndDrop.cs" />
     <Compile Include="Assets\Scripts\Menus\Instructions.cs" />
+    <Compile Include="Assets\Scripts\Menus\Options.cs" />
     <Compile Include="Assets\Scripts\Menus\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\PlaymodeSelect.cs" />
     <Compile Include="Assets\Scripts\Menus\StartMenu.cs" />
