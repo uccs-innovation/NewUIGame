@@ -22,9 +22,12 @@ public class Health : MonoBehaviour
     // Is regen already active?
     bool isRegenNow = false;
 
+    AvailablePortals availablePortals;
+
     // Start is called before the first frame update
     void Start()
     {
+        availablePortals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>();
         healthBar = GetComponent<Image>();
         healthBar.fillAmount = 1f;
 
@@ -35,7 +38,7 @@ public class Health : MonoBehaviour
     {
         healthBar.fillAmount -= damage;
 
-        if (healthBar.fillAmount <= 0)
+        if (healthBar.fillAmount <= 0 && !availablePortals.isInPlaylistMode)
         {
             // This is where the ghost dies
             GameObject objectiveFailed = Instantiate(objFailed);
