@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\Pathfinding\Unit.cs" />
     <Compile Include="Assets\Scripts\Pellets\Pellet.cs" />
     <Compile Include="Assets\Scripts\Pellets\PelletController.cs" />
+    <Compile Include="Assets\Scripts\player\ControlScheme.cs" />
     <Compile Include="Assets\Scripts\player\ghostCatcher.cs" />
     <Compile Include="Assets\Scripts\player\Health.cs" />
     <Compile Include="Assets\Scripts\player\playerController.cs" />

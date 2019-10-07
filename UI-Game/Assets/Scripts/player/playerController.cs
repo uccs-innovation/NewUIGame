@@ -19,7 +19,7 @@ public class playerController : MonoBehaviour
     AnimationCurve currentVCurve;
 
     // How fast the player moves left or right
-    float translateSpeed = 4.3f;
+    float translateSpeed = 4.8f; //4.3
 
     // Reference to the player ghost rigidbody
     Rigidbody2D rb;
@@ -166,13 +166,13 @@ public class playerController : MonoBehaviour
         if (isPaused) return;
 
         // Check for player firing
-        if (Input.GetKey(KeyCode.Space) && !firing)
+        if (Input.GetKey(ControlScheme.Shoot) && !firing)
         {
             FireProjectile();
         }
 
         // First, let's check if player is trying to jump
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+        if (Input.GetKeyDown(ControlScheme.Jump)  && isGrounded)
         {
             rb.velocity += Vector2.up * 5.5f;
             moveState = MoveStates.JUMPING;
@@ -184,10 +184,31 @@ public class playerController : MonoBehaviour
         }
 
         // If A or D key has just been released, then set horizontal curve to deceleration
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)) currentHCurve = decelerationCurve;
+        if (Input.GetKeyUp(ControlScheme.MoveLeft) || Input.GetKeyUp(ControlScheme.MoveRight)) currentHCurve = decelerationCurve;
 
         //Store the current horizontal input in the float moveHorizontal.
-        moveHorizontal = Input.GetAxis("Horizontal");
+        //moveHorizontal = Input.GetAxis("Horizontal");
+
+        if (Input.GetKey(ControlScheme.MoveLeft))
+        {
+            if (moveHorizontal > 0) moveHorizontal = 0;
+            moveHorizontal += -Time.deltaTime;
+            if (moveHorizontal < -1) moveHorizontal = -1;
+        }
+
+        else if (Input.GetKey(ControlScheme.MoveRight))
+        {
+            if (moveHorizontal < 0) moveHorizontal = 0;
+            moveHorizontal += Time.deltaTime;
+            if (moveHorizontal > 1) moveHorizontal = 1;
+        }
+
+        else
+        {
+            if (moveHorizontal > 0) moveHorizontal -= .05f;
+            else if (moveHorizontal < 0) moveHorizontal += .05f;
+            if (Mathf.Abs(moveHorizontal) <= .05f) moveHorizontal = 0;
+        }
 
         if (moveHorizontal < 0 && !isFlipped)
         {
