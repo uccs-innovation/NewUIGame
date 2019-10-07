@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PlaylistManager : MonoBehaviour
 {
@@ -28,7 +29,10 @@ public class PlaylistManager : MonoBehaviour
 
     public Canvas dragCanvas;
 
+    GameObject currentSelectedObject;
+
     Dictionary<GameObject, LevelObject> portalDict = new Dictionary<GameObject, LevelObject>();
+    Dictionary<GameObject, LevelObject> playlistDict = new Dictionary<GameObject, LevelObject>();
 
     private void Start()
     {
@@ -44,6 +48,8 @@ public class PlaylistManager : MonoBehaviour
         {
             dragItem = Instantiate(dragablePortal, portalPanel.transform);
             dragItem.GetComponentInChildren<TextMeshProUGUI>().text = portal.levelName;
+
+            portalDict.Add(dragItem, portal);
 
             EventTrigger trigger = dragItem.GetComponent<EventTrigger>();
             EventTrigger.Entry entryOne = new EventTrigger.Entry();
@@ -95,7 +101,8 @@ public class PlaylistManager : MonoBehaviour
     public void StartDrag(GameObject selectedObject)
     {
         dragItem = Instantiate(selectedObject, Input.mousePosition, selectedObject.transform.rotation) as GameObject;
-        //dragItem.GetComponent<Button>().enabled = false;
+        dragItem.GetComponent<Button>().enabled = false;
+        currentSelectedObject = selectedObject;
         dragItem.transform.SetParent(dragCanvas.transform);
         dragItem.GetComponent<Image>().SetNativeSize();
         dragItem.transform.localScale = 1.1f * dragItem.transform.localScale;
@@ -104,9 +111,17 @@ public class PlaylistManager : MonoBehaviour
 
     public void Drop()
     {
+        if (playlistDict.Count >= 9) return;
         GameObject droppedItem = Instantiate(dragablePortal, playlistPanel.transform);
-        droppedItem.transform.SetAsFirstSibling();
+        droppedItem.GetComponent<Button>().enabled = false;
+        droppedItem.transform.SetSiblingIndex(playlistDict.Count);
+        playlistDict.Add(droppedItem, portalDict[currentSelectedObject]);
         droppedItem.GetComponentInChildren<TextMeshProUGUI>().text = dragItem.GetComponentInChildren<TextMeshProUGUI>().text;
+    }
+
+    public void OnCancel()
+    {
+        SceneManager.LoadScene("PlaymodeSelect");
     }
 
 }
