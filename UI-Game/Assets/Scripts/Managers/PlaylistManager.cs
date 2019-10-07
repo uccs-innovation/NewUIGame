@@ -124,4 +124,18 @@ public class PlaylistManager : MonoBehaviour
         SceneManager.LoadScene("PlaymodeSelect");
     }
 
+    public void OnBegin()
+    {
+        availablePortals.isInPlaylistMode = true;
+        availablePortals.playlistIndex = 0;
+        availablePortals.portalPlaylist.Clear();
+
+        foreach(KeyValuePair<GameObject, LevelObject> entry in playlistDict)
+        {
+            availablePortals.portalPlaylist.Add(entry.Value);
+        }
+
+        SceneManager.LoadScene(availablePortals.portalPlaylist[0].sceneName);
+    }
+
 }

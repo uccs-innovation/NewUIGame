@@ -14,6 +14,12 @@ public class AvailablePortals : SingletonBehavior<AvailablePortals>
     // The active portal that the player is currently in
     LevelObject activePortal;
 
+    public bool isInPlaylistMode = false;
+
+    public List<LevelObject> portalPlaylist = new List<LevelObject>();
+
+    public int playlistIndex = 0;
+
     private void Start()
     {
         // If there are no available portals for the player, then let's give him the first one off the list

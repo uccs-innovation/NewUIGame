@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         availablePortals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>();
+        availablePortals.isInPlaylistMode = false;
         portals = availablePortals.GetPortals();
 
         PopulateButtons();
@@ -78,5 +79,10 @@ public class LevelManager : MonoBehaviour
 
         Debug.Log("Portal not found, please be sure to add it to list");
         return null;
+    }
+
+    public void OnBack()
+    {
+        SceneManager.LoadScene("PlaymodeSelect");
     }
 }

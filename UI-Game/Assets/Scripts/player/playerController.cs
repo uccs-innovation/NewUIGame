@@ -63,6 +63,8 @@ public class playerController : MonoBehaviour
 
     MoveStates moveState = MoveStates.IDLE;
 
+    AvailablePortals availablePortals;
+
 
     // Start is called before the first frame update
     void Start()
@@ -85,6 +87,8 @@ public class playerController : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
 
         sr = GetComponentInChildren<SpriteRenderer>();
+
+        availablePortals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>();
     }
 
     // Handles collisions with platforms
@@ -124,12 +128,17 @@ public class playerController : MonoBehaviour
     // Handles the event when the player falls from a platform
     void FallenGhostHandler()
     {
-        //rb.velocity = Vector2.zero;
-        //transform.position = startPosition;
-
-        isPaused = true;
-        //GameWinEvent.Invoke();
-        GameObject objectiveFailed = Instantiate(objFailed);
+        if (availablePortals.isInPlaylistMode)
+        {
+            rb.velocity = Vector2.zero;
+            transform.position = startPosition;
+        }
+        else
+        {
+            isPaused = true;
+            //GameWinEvent.Invoke();
+            GameObject objectiveFailed = Instantiate(objFailed);
+        }
     }
 
     void FireProjectile()

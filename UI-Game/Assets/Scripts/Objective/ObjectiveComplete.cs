@@ -68,8 +68,18 @@ public class ObjectiveComplete : MonoBehaviour
 
     public void OnContinueButtonPressed()
     {
+        if (availablePortals.isInPlaylistMode)
+        {
+            availablePortals.playlistIndex++;
+            if (availablePortals.playlistIndex >= availablePortals.portalPlaylist.Count)
+            {
+                availablePortals.playlistIndex = 0;
+            }
+            Time.timeScale = 1;
+            SceneManager.LoadScene(availablePortals.portalPlaylist[availablePortals.playlistIndex].sceneName);
+        }
         // Here we'll check to see if the player should be awarded the next portal
-        if (NextPortalAwarded())
+        else if (NextPortalAwarded())
         {
             SceneManager.LoadScene("PortalAwarded");
 
