@@ -897,7 +897,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 27
+    m_FontSize: 21
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -908,7 +908,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'A* Pathfinding system developed while following this youtube video: https://www.youtube.com/watch?v=mZfyt03LDH4&list=PLFt_AvWsXl0cq5Umv3pMC9SPnKjfp9eGW&index=3'
+  m_Text: 'A* Pathfinding system developed while following this youtube video: https://www.youtube.com/watch?v=mZfyt03LDH4&list=PLFt_AvWsXl0cq5Umv3pMC9SPnKjfp9eGW&index=3
+
+'
 --- !u!222 &1672481483
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1059,7 +1061,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 27
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1072,19 +1074,26 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '"Cinemachine" Unity Asset used for camera follow
 
-
     All art, animations, and particle systems made by Chad Credeur.
 
 
-    List of selectable items: When the player meets the win conditions for a level,
-    they''re awarded an ascension portal that''s used to access new game levels. ***In
-    this version the player only needs to kill 3 pacmen and collect all pellets in
-    order to be awarded the portal to the next level***
+    Music and sound assets are from two collections that I purchased on the Unity
+    Asset store
 
 
-    Overview feature: The player is able to navigate to each of the game levels using
-    the portals they''ve been rewarded. The level select screen appears after pressing
-    "Play" at the title screen. '
+    **Grader only needs to kill 3 pacmen and collect all pellets in each level to
+    be awarded the next Portal*** (only 3 portals exist in the game)
+
+
+    Multiple Item Select: "Portal Playlist" mode has been added. This allows the player
+    to drag portals from their inventory into a playlist and play them in order (looping).
+    Additional effect: Immortality! This feature will allow players to improve their
+    skills through repetitive play in a forgiving setting.
+
+
+    Configurable controls: The player can select from three control schemes. Accessible
+    from Options menu. This will provide the player with the option to use mouse and
+    arrow keys if preferred.'
 --- !u!222 &1722641690
 CanvasRenderer:
   m_ObjectHideFlags: 0

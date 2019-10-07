@@ -24,6 +24,8 @@ public class PlaylistManager : MonoBehaviour
 
     AvailablePortals availablePortals;
 
+    AudioSource pop;
+
     public GameObject dragItem;
     GameObject dropItem;
 
@@ -36,6 +38,7 @@ public class PlaylistManager : MonoBehaviour
 
     private void Start()
     {
+        pop = gameObject.GetComponent<AudioSource>();
         availablePortals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>();
         portals = availablePortals.GetPortals();
 
@@ -117,6 +120,7 @@ public class PlaylistManager : MonoBehaviour
         droppedItem.transform.SetSiblingIndex(playlistDict.Count);
         playlistDict.Add(droppedItem, portalDict[currentSelectedObject]);
         droppedItem.GetComponentInChildren<TextMeshProUGUI>().text = dragItem.GetComponentInChildren<TextMeshProUGUI>().text;
+        pop.Play();
     }
 
     public void OnCancel()

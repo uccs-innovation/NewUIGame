@@ -458,9 +458,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Use A and D keys to move the ghost left and right\nUse W to jump\nUse Spacebar
-    to fire energy bursts \n\nCollect all pellets in each level and use your energy
-    burst to destroy the pacmen that get in your way!\n"
+  m_text: "Collect all pellets in each level and use your energy burst to destroy
+    the pacmen that get in your way!\n\nDifferent control schemes can be selected
+    from Options screen \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -505,7 +505,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 50
+  m_firstOverflowCharacterIndex: 54
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -529,12 +529,12 @@ MonoBehaviour:
   m_margin: {x: -366.72534, y: 0, z: -368.8954, w: 0}
   m_textInfo:
     textComponent: {fileID: 1010855260}
-    characterCount: 205
+    characterCount: 168
     spriteCount: 0
-    spaceCount: 44
-    wordCount: 42
+    spaceCount: 31
+    wordCount: 29
     linkCount: 0
-    lineCount: 6
+    lineCount: 5
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
