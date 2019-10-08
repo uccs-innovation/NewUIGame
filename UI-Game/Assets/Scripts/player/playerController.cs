@@ -174,7 +174,7 @@ public class playerController : MonoBehaviour
         // First, let's check if player is trying to jump
         if (Input.GetKeyDown(ControlScheme.Jump)  && isGrounded)
         {
-            rb.velocity += Vector2.up * 5.5f;
+            rb.velocity += Vector2.up * 7.3f; // 5.5
             moveState = MoveStates.JUMPING;
         }
 
