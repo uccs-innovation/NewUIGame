@@ -322,7 +322,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12760}
     - Class: 114
-      Script: {instanceID: 18016}
+      Script: {instanceID: 16974}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -698,7 +698,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12760}
     - Class: 114
-      Script: {instanceID: 18016}
+      Script: {instanceID: 16974}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -896,7 +896,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12760}
     - Class: 114
-      Script: {instanceID: 18016}
+      Script: {instanceID: 16974}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2102,4 +2102,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/PlaymodeSelect.unity
   - Assets/Scenes/PlaylistSelect.unity
   - Assets/Scenes/Options.unity
-  playerPath: C:/Users/crede/Desktop/HoppyGhost/UI-Game.exe
+  playerPath: C:/Users/Chad/Desktop/HoppyGhost/UI-Game.exe
