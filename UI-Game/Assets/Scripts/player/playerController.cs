@@ -174,9 +174,8 @@ public class playerController : MonoBehaviour
         // First, let's check if player is trying to jump
         if (Input.GetKeyDown(ControlScheme.Jump)  && isGrounded)
         {
-            rb.velocity += Vector2.up * 7.1f; // 5.5
+            rb.velocity += Vector2.up * 5.5f;
             moveState = MoveStates.JUMPING;
-            isGrounded = false;
         }
 
         if (moveState != MoveStates.FALLING && rb.velocity.y < 0f)
@@ -242,7 +241,7 @@ public class playerController : MonoBehaviour
 
                 // Make necessary vertical movement
                 transform.position += new Vector3(1, 0, 0) * currentHCurve.Evaluate(moveHorizontal) * translateSpeed * Time.deltaTime;
-                //isGrounded = false;
+                isGrounded = false;
 
                 break;
 
