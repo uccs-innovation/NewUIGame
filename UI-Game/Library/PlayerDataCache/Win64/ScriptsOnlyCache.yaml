@@ -52,6 +52,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
@@ -322,7 +330,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12760}
     - Class: 114
-      Script: {instanceID: 16974}
+      Script: {instanceID: 16488}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -698,7 +706,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12760}
     - Class: 114
-      Script: {instanceID: 16974}
+      Script: {instanceID: 16488}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -896,7 +904,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12760}
     - Class: 114
-      Script: {instanceID: 16974}
+      Script: {instanceID: 16488}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
