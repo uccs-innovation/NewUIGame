@@ -35,6 +35,9 @@ public class playerController : MonoBehaviour
     // We'll save this so that we can use it to respawn
     Vector2 startPosition;
 
+    // Reference to animtor component attached to this gameobject
+    Animator animator;
+
     // Are we currently in the process of firing?
     bool firing = false;
 
@@ -69,6 +72,9 @@ public class playerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
+        //animator.SetBool("isLeaning", true);
+
         // Adds this script as a listener for the event when the player falls from a platform
         ghostCatcher.AddFallenGhostListener(FallenGhostHandler);
 
