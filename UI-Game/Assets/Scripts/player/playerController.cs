@@ -73,7 +73,6 @@ public class playerController : MonoBehaviour
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
-        //animator.SetBool("isLeaning", true);
 
         // Adds this script as a listener for the event when the player falls from a platform
         ghostCatcher.AddFallenGhostListener(FallenGhostHandler);
@@ -190,13 +189,18 @@ public class playerController : MonoBehaviour
         }
 
         // If A or D key has just been released, then set horizontal curve to deceleration
-        if (Input.GetKeyUp(ControlScheme.MoveLeft) || Input.GetKeyUp(ControlScheme.MoveRight)) currentHCurve = decelerationCurve;
+        if (Input.GetKeyUp(ControlScheme.MoveLeft) || Input.GetKeyUp(ControlScheme.MoveRight))
+        {
+            animator.SetBool("isLeaning", false);
+            currentHCurve = decelerationCurve;
+        }
 
         //Store the current horizontal input in the float moveHorizontal.
         //moveHorizontal = Input.GetAxis("Horizontal");
 
         if (Input.GetKey(ControlScheme.MoveLeft))
         {
+            animator.SetBool("isLeaning", true);
             if (moveHorizontal > 0) moveHorizontal = 0;
             moveHorizontal += -Time.deltaTime;
             if (moveHorizontal < -1) moveHorizontal = -1;
@@ -204,6 +208,7 @@ public class playerController : MonoBehaviour
 
         else if (Input.GetKey(ControlScheme.MoveRight))
         {
+            animator.SetBool("isLeaning", true);
             if (moveHorizontal < 0) moveHorizontal = 0;
             moveHorizontal += Time.deltaTime;
             if (moveHorizontal > 1) moveHorizontal = 1;

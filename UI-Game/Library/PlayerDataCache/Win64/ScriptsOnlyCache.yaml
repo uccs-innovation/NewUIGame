@@ -45,6 +45,7 @@ ScriptsOnlyBuild:
     Unity.2D.IK.Editor.dll:
     - UnityEditor.Experimental.U2D.IK.IKEditorManager
     - UnityEditor.Experimental.U2D.IK.IKGizmos
+    - UnityEditor.Experimental.U2D.IK.IKManager2DEditor
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.Experimental.U2D.IK.IKEditorManagerHelper
     - UnityEngine.Experimental.U2D.IK.FabrikSolver2D
@@ -62,8 +63,11 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnimatorStateTransitionInspector
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -339,7 +343,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12826}
     - Class: 114
-      Script: {instanceID: 16392}
+      Script: {instanceID: 16942}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -719,7 +723,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12826}
     - Class: 114
-      Script: {instanceID: 16392}
+      Script: {instanceID: 16942}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -921,7 +925,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12826}
     - Class: 114
-      Script: {instanceID: 16392}
+      Script: {instanceID: 16942}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
