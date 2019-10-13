@@ -151,8 +151,8 @@ public class playerController : MonoBehaviour
         firing = true;
         int flipped = isFlipped ? -1 : 1;
 
-        GameObject projectile = Instantiate(energyBurst, 
-            new Vector3(transform.position.x + flipped * .37f, transform.position.y + .24f, 0f), Quaternion.identity, null);
+        GameObject projectile = Instantiate(energyBurst,
+            new Vector3(transform.position.x + flipped * .38f, transform.position.y + .05f, 0f), Quaternion.identity, null);
 
         projectile.GetComponent<Rigidbody2D>().AddForce(Vector2.right * projectileForce * flipped, ForceMode2D.Impulse);
         StartCoroutine("FireDelayTimer");
@@ -223,13 +223,22 @@ public class playerController : MonoBehaviour
 
         if (moveHorizontal < 0 && !isFlipped)
         {
-            sr.flipX = true;
+            FlipGhost();
+            //sr.flipX = true;
             isFlipped = true;
         }
         else if (moveHorizontal > 0 && isFlipped)
         {
-            sr.flipX = false;
+            FlipGhost();
+            //sr.flipX = false;
             isFlipped = false;
+        }
+
+        void FlipGhost()
+        {
+            Vector3 newScale = gameObject.transform.localScale;
+            newScale.x *= -1;
+            gameObject.transform.localScale = newScale;
         }
 
         switch (moveState)
