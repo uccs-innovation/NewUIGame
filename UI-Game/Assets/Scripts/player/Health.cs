@@ -7,8 +7,14 @@ public class Health : MonoBehaviour
 {
     Image healthBar;
 
+    Transform player;
+
     [SerializeField]
     GameObject objFailed;
+
+    Transform parentObject;
+
+    Vector3 offsetFromPlayer;
 
     // How much damage to sustain after colliding with a pacman
     float damage = .4f;
@@ -27,9 +33,17 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        // Listen for when player takes damage
+        player.gameObject.GetComponent<playerController>().damageTaken.AddListener(HandleHealthLoss);
+
+        parentObject = gameObject.transform.parent;
         availablePortals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>();
         healthBar = GetComponent<Image>();
         healthBar.fillAmount = 1f;
+
+        offsetFromPlayer = new Vector3(.035f, .8f, 0f);
 
         repairRate = damage / 3f;
     }
@@ -56,6 +70,11 @@ public class Health : MonoBehaviour
         {
             StartCoroutine("RegenHealth");
         }
+    }
+
+    private void Update()
+    {
+        parentObject.position = player.position + offsetFromPlayer;
     }
 
     IEnumerator RegenHealth()

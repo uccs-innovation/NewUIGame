@@ -68,6 +68,7 @@ public class playerController : MonoBehaviour
 
     AvailablePortals availablePortals;
 
+    public UnityEvent damageTaken = new UnityEvent();
 
     // Start is called before the first frame update
     void Start()
@@ -127,7 +128,7 @@ public class playerController : MonoBehaviour
 
     void CollidedWithPacman()
     {
-        BroadcastMessage("HandleHealthLoss");
+        damageTaken.Invoke();
     }
 
     // Handles the event when the player falls from a platform

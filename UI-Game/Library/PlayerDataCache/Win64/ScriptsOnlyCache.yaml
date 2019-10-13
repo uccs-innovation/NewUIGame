@@ -65,7 +65,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateEditor
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
@@ -342,7 +341,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12826}
     - Class: 114
-      Script: {instanceID: 17342}
+      Script: {instanceID: 17028}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -722,7 +721,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12826}
     - Class: 114
-      Script: {instanceID: 17342}
+      Script: {instanceID: 17028}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -924,7 +923,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12826}
     - Class: 114
-      Script: {instanceID: 17342}
+      Script: {instanceID: 17028}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1854,7 +1853,7 @@ ScriptsOnlyBuild:
     className: SceneSectionProxy
   - hash:
       serializedVersion: 2
-      Hash: 1c3fedcde05e721a4f78bb2e9bc49170
+      Hash: 137990ac947fd641a6ced57cef1b2040
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: playerController
