@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PlaymodeSelect : MonoBehaviour
 {
+    AudioSource selected;
+
+    private void Start()
+    {
+        selected = GetComponent<AudioSource>();
+    }
     public void OnNormalModeSelected()
     {
         SceneManager.LoadScene("LevelSelect");
