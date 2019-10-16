@@ -5,6 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
+    AudioSource mouseOver;
+
+    private void Start()
+    {
+        AudioSource[] sources = GetComponents<AudioSource>();
+
+        // Assign first audiosource attached to the gameobject
+        mouseOver = sources[0];
+    }
     public void OnInstructionsButtonPressed()
     {
         SceneManager.LoadScene("Instructions");
@@ -28,5 +37,10 @@ public class StartMenu : MonoBehaviour
     public void OnOptionsClicked()
     {
         SceneManager.LoadScene("Options");
+    }
+
+    public void OnMouseOver()
+    {
+        mouseOver.Play();
     }
 }
