@@ -82,6 +82,7 @@ public class playerController : MonoBehaviour
     {
         Debug.Log(value);
     }
+
     void Fire()
     {
         Debug.Log("Fire");
@@ -123,12 +124,14 @@ public class playerController : MonoBehaviour
         sr = GetComponentInChildren<SpriteRenderer>();
 
         availablePortals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>();
+
+        InputSystem.onDeviceChange += DeviceChange;
     }
 
-    //private void OnMovementChanged(InputAction.CallbackContext context)
-    //{
-    //    Debug.Log(context.ReadValue<Vector2>());
-    //}
+    void DeviceChange(InputDevice device, InputDeviceChange change)
+    {
+        Debug.Log("CHANGE!!!!");
+    }
 
     // Handles collisions with platforms
     private void OnCollisionEnter2D(Collision2D collision)
@@ -196,6 +199,23 @@ public class playerController : MonoBehaviour
     {
         yield return new WaitForSeconds(cooldownBetweenProjectiles);
         firing = false;
+    }
+
+    void FlipGhost()
+    {
+        Vector3 newScale = gameObject.transform.localScale;
+        newScale.x *= -1;
+        gameObject.transform.localScale = newScale;
+    }
+
+    // Returns whether or not a gamepad is connected
+    bool CheckGamepadState()
+    {
+        if (Gamepad.current != null)
+        {
+            return true;
+        }
+        else return false;
     }
 
     // Update is called once per frame
@@ -266,13 +286,6 @@ public class playerController : MonoBehaviour
             FlipGhost();
             //sr.flipX = false;
             isFlipped = false;
-        }
-
-        void FlipGhost()
-        {
-            Vector3 newScale = gameObject.transform.localScale;
-            newScale.x *= -1;
-            gameObject.transform.localScale = newScale;
         }
 
         switch (moveState)
