@@ -45,6 +45,13 @@ public class playerController : MonoBehaviour
     [SerializeField]
     GameObject energyBurst; // prefab for the energy burst projectile
 
+    bool shootButton;
+    bool jumpButton;
+    bool moveLeftButton;
+    bool moveRightButton;
+    bool moveLeftButtonUp;
+    bool moveRightButtonUp;
+
     // Gameover UI for when the player falls from a platform
     [SerializeField]
     GameObject objFailed;
@@ -55,6 +62,9 @@ public class playerController : MonoBehaviour
     float cooldownBetweenProjectiles = .1f;
 
     SpriteRenderer sr;
+
+    // Is the player using a gamepad?
+    bool gamepadMode;
 
     enum MoveStates
     {
@@ -74,18 +84,21 @@ public class playerController : MonoBehaviour
     private void Awake()
     {
         player = new Player();
-        player.Gameplay.Shoot.performed += ctx => Fire();
-        player.Gameplay.Move.performed += ctx => Move(ctx.ReadValue<float>());
-    }
 
-    void Move(float value)
-    {
-        Debug.Log(value);
-    }
+        // Listen for shooting
+        player.Gameplay.Shoot.started += ctx => shootButton = true;
+        player.Gameplay.ReleaseShoot.performed += ctx => shootButton = false;
 
-    void Fire()
-    {
-        Debug.Log("Fire");
+        // Listen for jumping
+        player.Gameplay.Jump.started += ctx => jumpButton = true;
+        player.Gameplay.ReleaseJump.performed += ctx => jumpButton = false;
+
+        player.Gameplay.MoveLeft.started += ctx => moveLeftButton = true;
+        player.Gameplay.ReleaseLeft.performed += ctx => moveLeftButton = false;
+
+        player.Gameplay.MoveRight.started += ctx => moveRightButton = true;
+        player.Gameplay.ReleaseRight.performed += ctx => moveRightButton = false;
+
     }
 
     public void OnEnable()
@@ -125,12 +138,15 @@ public class playerController : MonoBehaviour
 
         availablePortals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>();
 
+        gamepadMode = CheckGamepadState();
+        //gamepadMode = false;
+
         InputSystem.onDeviceChange += DeviceChange;
     }
 
     void DeviceChange(InputDevice device, InputDeviceChange change)
     {
-        Debug.Log("CHANGE!!!!");
+        gamepadMode = CheckGamepadState();
     }
 
     // Handles collisions with platforms
@@ -224,14 +240,24 @@ public class playerController : MonoBehaviour
         // Don't run the update method if the game is paused
         if (isPaused) return;
 
+        if (!gamepadMode)
+        {
+            shootButton = Input.GetKey(ControlScheme.Shoot);
+            jumpButton = Input.GetKey(ControlScheme.Jump);
+            moveLeftButton = Input.GetKey(ControlScheme.MoveLeft);
+            moveRightButton = Input.GetKey(ControlScheme.MoveRight);
+            moveLeftButtonUp = Input.GetKeyUp(ControlScheme.MoveLeft);
+            moveRightButtonUp = Input.GetKeyUp(ControlScheme.MoveRight);
+        }
+
         // Check for player firing
-        if (Input.GetKey(ControlScheme.Shoot) && !firing)
+        if (shootButton && !firing)
         {
             FireProjectile();
         }
 
         // First, let's check if player is trying to jump
-        if (Input.GetKeyDown(ControlScheme.Jump)  && isGrounded)
+        if (jumpButton  && isGrounded)
         {
             rb.velocity += Vector2.up * 7.3f; // 5.5
             moveState = MoveStates.JUMPING;
@@ -243,7 +269,7 @@ public class playerController : MonoBehaviour
         }
 
         // If A or D key has just been released, then set horizontal curve to deceleration
-        if (Input.GetKeyUp(ControlScheme.MoveLeft) || Input.GetKeyUp(ControlScheme.MoveRight))
+        if (moveLeftButtonUp || moveRightButtonUp)
         {
             animator.SetBool("isLeaning", false);
             currentHCurve = decelerationCurve;
@@ -252,7 +278,7 @@ public class playerController : MonoBehaviour
         //Store the current horizontal input in the float moveHorizontal.
         //moveHorizontal = Input.GetAxis("Horizontal");
 
-        if (Input.GetKey(ControlScheme.MoveLeft))
+        if (moveLeftButton)
         {
             animator.SetBool("isLeaning", true);
             if (moveHorizontal > 0) moveHorizontal = 0;
@@ -260,7 +286,7 @@ public class playerController : MonoBehaviour
             if (moveHorizontal < -1) moveHorizontal = -1;
         }
 
-        else if (Input.GetKey(ControlScheme.MoveRight))
+        else if (moveRightButton)
         {
             animator.SetBool("isLeaning", true);
             if (moveHorizontal < 0) moveHorizontal = 0;

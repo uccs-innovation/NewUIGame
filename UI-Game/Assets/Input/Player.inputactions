@@ -6,7 +6,23 @@
             "id": "f1653a23-7f61-4082-b651-bcd4186f67c2",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "c418b845-99d3-4f0f-8999-064faf9a0666",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MoveRight",
+                    "type": "Button",
+                    "id": "e2316ca6-9c77-4b67-a2b3-a14588b20d1f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MoveLeft",
                     "type": "Value",
                     "id": "b81cb9e3-f060-44bb-856b-23a5a2478f66",
                     "expectedControlType": "Axis",
@@ -14,12 +30,44 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Shoot",
+                    "name": "Jump",
                     "type": "Button",
-                    "id": "c418b845-99d3-4f0f-8999-064faf9a0666",
+                    "id": "cb62629c-7936-4d97-ba01-d0ce0d76b66c",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=2)"
+                },
+                {
+                    "name": "ReleaseLeft",
+                    "type": "Button",
+                    "id": "84b06a99-4407-453f-9e50-839cc6042834",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)"
+                },
+                {
+                    "name": "ReleaseRight",
+                    "type": "Button",
+                    "id": "da2873f4-0ed5-4cea-bc3d-58920b4af5b2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)"
+                },
+                {
+                    "name": "ReleaseJump",
+                    "type": "Button",
+                    "id": "e231b652-4a8d-4df6-aa25-8072d6e62f1f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)"
+                },
+                {
+                    "name": "ReleaseShoot",
+                    "type": "Button",
+                    "id": "0c53ee15-f571-4eb5-8f5e-0adb14bcfb12",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)"
                 }
             ],
             "bindings": [
@@ -27,7 +75,7 @@
                     "name": "",
                     "id": "5c6d6fc3-b862-4494-ac54-c3991f548941",
                     "path": "<Gamepad>/rightTrigger",
-                    "interactions": "Press",
+                    "interactions": "Hold",
                     "processors": "",
                     "groups": "",
                     "action": "Shoot",
@@ -36,12 +84,78 @@
                 },
                 {
                     "name": "",
-                    "id": "7e4e4b6d-e534-4420-94ad-573cd817a7ec",
-                    "path": "<Gamepad>/leftStick/x",
+                    "id": "82dd3a67-4135-49a4-a799-f3690b160015",
+                    "path": "<Gamepad>/leftStick/right",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "MoveRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "72d9a81a-d14f-492d-9d87-66ad5f15acd0",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "920b2a6d-50e8-4ff8-a54b-8c71fbd2af94",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "940850f9-386e-40b7-9553-516b84d84e68",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReleaseLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ae1400ee-3ffb-4030-8efd-8a37e92eae6c",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReleaseRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2e926427-d854-445d-86fd-676f0f5046d6",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReleaseJump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9dc1604f-323b-4ee4-b367-7a32ddc7ec9f",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReleaseShoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
