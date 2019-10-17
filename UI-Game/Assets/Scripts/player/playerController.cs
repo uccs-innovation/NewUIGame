@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-public class playerController : MonoBehaviour, Player.IGameplayActions
+public class playerController : MonoBehaviour
 {
     GameObject objCanvas;
 
@@ -74,7 +74,17 @@ public class playerController : MonoBehaviour, Player.IGameplayActions
     private void Awake()
     {
         player = new Player();
-        player.Gameplay.SetCallbacks(this);
+        player.Gameplay.Shoot.performed += ctx => Fire();
+        player.Gameplay.Move.performed += ctx => Move(ctx.ReadValue<float>());
+    }
+
+    void Move(float value)
+    {
+        Debug.Log(value);
+    }
+    void Fire()
+    {
+        Debug.Log("Fire");
     }
 
     public void OnEnable()
@@ -305,15 +315,5 @@ public class playerController : MonoBehaviour, Player.IGameplayActions
                 }
                 break;
         }
-    }
-
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        Debug.Log(context.ReadValue<Vector2>());
-    }
-
-    public void OnShoot(InputAction.CallbackContext context)
-    {
-        Debug.Log("Shoot");
     }
 }

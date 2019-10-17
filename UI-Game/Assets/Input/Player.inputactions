@@ -7,9 +7,9 @@
             "actions": [
                 {
                     "name": "Move",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "b81cb9e3-f060-44bb-856b-23a5a2478f66",
-                    "expectedControlType": "Stick",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": ""
                 },
@@ -36,9 +36,9 @@
                 },
                 {
                     "name": "",
-                    "id": "1e5ed4a7-071a-4692-8cbf-324f4410a634",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
+                    "id": "7e4e4b6d-e534-4420-94ad-573cd817a7ec",
+                    "path": "<Gamepad>/leftStick/x",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "Move",
