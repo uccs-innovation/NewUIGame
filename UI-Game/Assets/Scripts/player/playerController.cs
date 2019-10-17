@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
-public class playerController : MonoBehaviour
+public class playerController : MonoBehaviour, Player.IGameplayActions
 {
     GameObject objCanvas;
 
-    //int pelletCount;
+    Player player;
 
     public AnimationCurve accelerationCurve;
     public AnimationCurve decelerationCurve;
@@ -70,6 +71,23 @@ public class playerController : MonoBehaviour
 
     public UnityEvent damageTaken = new UnityEvent();
 
+    private void Awake()
+    {
+        player = new Player();
+        player.Gameplay.SetCallbacks(this);
+    }
+
+    public void OnEnable()
+    {
+        player.Gameplay.Enable();
+    }
+
+    public void OnDisable()
+    {
+        player.Gameplay.Disable();
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -96,6 +114,11 @@ public class playerController : MonoBehaviour
 
         availablePortals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>();
     }
+
+    //private void OnMovementChanged(InputAction.CallbackContext context)
+    //{
+    //    Debug.Log(context.ReadValue<Vector2>());
+    //}
 
     // Handles collisions with platforms
     private void OnCollisionEnter2D(Collision2D collision)
@@ -282,5 +305,15 @@ public class playerController : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        Debug.Log(context.ReadValue<Vector2>());
+    }
+
+    public void OnShoot(InputAction.CallbackContext context)
+    {
+        Debug.Log("Shoot");
     }
 }

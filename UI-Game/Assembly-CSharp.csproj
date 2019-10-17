@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Input\Player.cs" />
     <Compile Include="Assets\Scripts\Events\PacmanDeathEvent.cs" />
     <Compile Include="Assets\Scripts\Events\PelletCollectedEvent.cs" />
     <Compile Include="Assets\Scripts\Events\PointsGrantedEvent.cs" />

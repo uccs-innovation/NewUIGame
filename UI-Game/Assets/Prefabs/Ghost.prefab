@@ -84,13 +84,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722114760303533540}
-  m_LocalRotation: {x: -0, y: -0, z: 0.9988742, w: -0.047439277}
+  m_LocalRotation: {x: -0, y: -0, z: 0.87796575, w: 0.47872335}
   m_LocalPosition: {x: 0.134, y: -0.001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5210592060538878525}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 185.43799}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 122.796005}
 --- !u!1 &1900552452628457683
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,13 +282,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2433668721284556658}
-  m_LocalRotation: {x: -0, y: -0, z: 0.96027637, w: 0.27905068}
+  m_LocalRotation: {x: -0, y: -0, z: 0.6783685, w: 0.7347219}
   m_LocalPosition: {x: 0.152, y: -0.009, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5507509903189402264}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 147.593}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 85.43301}
 --- !u!1 &2555833009004490510
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca0fd5a605ce7d4187a064f0b5dd574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerControls: {fileID: -944628639613478452, guid: 0b1f844b9b18d51428583b0bfac9112b,
+    type: 3}
   accelerationCurve:
     serializedVersion: 2
     m_Curve:
@@ -726,6 +728,11 @@ MonoBehaviour:
     type: 3}
   objFailed: {fileID: 2045851329380556967, guid: b98775b9c87f44448aff1237146cf335,
     type: 3}
+  damageTaken:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!50 &8037783597332753621
 Rigidbody2D:
   serializedVersion: 4
