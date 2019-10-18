@@ -94,10 +94,10 @@ public class playerController : MonoBehaviour
         player.Gameplay.ReleaseJump.performed += ctx => jumpButton = false;
 
         player.Gameplay.MoveLeft.started += ctx => moveLeftButton = true;
-        player.Gameplay.ReleaseLeft.performed += ctx => moveLeftButton = false;
+        player.Gameplay.ReleaseLeft.performed += ctx => moveLeftButtonUp = true;
 
         player.Gameplay.MoveRight.started += ctx => moveRightButton = true;
-        player.Gameplay.ReleaseRight.performed += ctx => moveRightButton = false;
+        player.Gameplay.ReleaseRight.performed += ctx => moveRightButtonUp = true;
 
     }
 
@@ -163,7 +163,7 @@ public class playerController : MonoBehaviour
     // Handles collisions with platforms
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        // *************** We also need to perform a raycast to ensure that player is standing on a platform **************
         if (collision.gameObject.tag == "platform" && moveState == MoveStates.JUMPING)
         {
             moveState = MoveStates.FALLING;
@@ -262,6 +262,17 @@ public class playerController : MonoBehaviour
             moveRightButtonUp = Input.GetKeyUp(ControlScheme.MoveRight);
         }
 
+        // If A or D key has just been released, then set horizontal curve to deceleration
+        if (moveLeftButtonUp || moveRightButtonUp)
+        {
+            moveLeftButtonUp = false;
+            moveRightButtonUp = false;
+            moveLeftButton = false;
+            moveRightButton = false;
+            animator.SetBool("isLeaning", false);
+            currentHCurve = decelerationCurve;
+        }
+
         // Check for player firing
         if (shootButton && !firing)
         {
@@ -280,18 +291,12 @@ public class playerController : MonoBehaviour
             moveState = MoveStates.FALLING;
         }
 
-        // If A or D key has just been released, then set horizontal curve to deceleration
-        if (moveLeftButtonUp || moveRightButtonUp)
-        {
-            animator.SetBool("isLeaning", false);
-            currentHCurve = decelerationCurve;
-        }
-
         //Store the current horizontal input in the float moveHorizontal.
         //moveHorizontal = Input.GetAxis("Horizontal");
 
         if (moveLeftButton)
         {
+            currentHCurve = accelerationCurve;
             animator.SetBool("isLeaning", true);
             if (moveHorizontal > 0) moveHorizontal = 0;
             moveHorizontal += -Time.deltaTime;
@@ -300,6 +305,7 @@ public class playerController : MonoBehaviour
 
         else if (moveRightButton)
         {
+            currentHCurve = accelerationCurve;
             animator.SetBool("isLeaning", true);
             if (moveHorizontal < 0) moveHorizontal = 0;
             moveHorizontal += Time.deltaTime;

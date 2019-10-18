@@ -81,6 +81,14 @@ public class Player : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": ""Press(behavior=1)""
+                },
+                {
+                    ""name"": ""Escape"",
+                    ""type"": ""Button"",
+                    ""id"": ""00f3901c-801e-40e8-b7b6-c0b2f1191296"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)""
                 }
             ],
             ""bindings"": [
@@ -171,6 +179,17 @@ public class Player : IInputActionCollection, IDisposable
                     ""action"": ""ReleaseShoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""88a9037d-9a30-4f29-ba82-69f1ba4ab89d"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Standard;ShootButtonSwitched"",
+                    ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -210,6 +229,7 @@ public class Player : IInputActionCollection, IDisposable
         m_Gameplay_ReleaseRight = m_Gameplay.FindAction("ReleaseRight", throwIfNotFound: true);
         m_Gameplay_ReleaseJump = m_Gameplay.FindAction("ReleaseJump", throwIfNotFound: true);
         m_Gameplay_ReleaseShoot = m_Gameplay.FindAction("ReleaseShoot", throwIfNotFound: true);
+        m_Gameplay_Escape = m_Gameplay.FindAction("Escape", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -267,6 +287,7 @@ public class Player : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_ReleaseRight;
     private readonly InputAction m_Gameplay_ReleaseJump;
     private readonly InputAction m_Gameplay_ReleaseShoot;
+    private readonly InputAction m_Gameplay_Escape;
     public struct GameplayActions
     {
         private Player m_Wrapper;
@@ -279,6 +300,7 @@ public class Player : IInputActionCollection, IDisposable
         public InputAction @ReleaseRight => m_Wrapper.m_Gameplay_ReleaseRight;
         public InputAction @ReleaseJump => m_Wrapper.m_Gameplay_ReleaseJump;
         public InputAction @ReleaseShoot => m_Wrapper.m_Gameplay_ReleaseShoot;
+        public InputAction @Escape => m_Wrapper.m_Gameplay_Escape;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -312,6 +334,9 @@ public class Player : IInputActionCollection, IDisposable
                 ReleaseShoot.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReleaseShoot;
                 ReleaseShoot.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReleaseShoot;
                 ReleaseShoot.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReleaseShoot;
+                Escape.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnEscape;
+                Escape.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnEscape;
+                Escape.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnEscape;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -340,6 +365,9 @@ public class Player : IInputActionCollection, IDisposable
                 ReleaseShoot.started += instance.OnReleaseShoot;
                 ReleaseShoot.performed += instance.OnReleaseShoot;
                 ReleaseShoot.canceled += instance.OnReleaseShoot;
+                Escape.started += instance.OnEscape;
+                Escape.performed += instance.OnEscape;
+                Escape.canceled += instance.OnEscape;
             }
         }
     }
@@ -372,5 +400,6 @@ public class Player : IInputActionCollection, IDisposable
         void OnReleaseRight(InputAction.CallbackContext context);
         void OnReleaseJump(InputAction.CallbackContext context);
         void OnReleaseShoot(InputAction.CallbackContext context);
+        void OnEscape(InputAction.CallbackContext context);
     }
 }

@@ -656,8 +656,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca0fd5a605ce7d4187a064f0b5dd574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerControls: {fileID: -944628639613478452, guid: 0b1f844b9b18d51428583b0bfac9112b,
-    type: 3}
   accelerationCurve:
     serializedVersion: 2
     m_Curve:

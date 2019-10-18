@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField]
     GameObject controlSchemePrefab;
+
+    [SerializeField]
+    GameObject controlsButton;
 
     GameObject instructions;
 
@@ -28,6 +32,7 @@ public class PauseMenu : MonoBehaviour
 
         // Create a fade canvas
         pauseCanvas.enabled = false;
+
     }
 
     // Delegate for the game paused event
@@ -45,6 +50,9 @@ public class PauseMenu : MonoBehaviour
         }
         else
         {
+            // Set Controls button as selected
+            controlsButton.GetComponent<Button>().Select();
+
             Cursor.visible = true;
             pauseCanvas.enabled = true;
             isPaused = true;
@@ -69,6 +77,10 @@ public class PauseMenu : MonoBehaviour
     void ReturnHandler()
     {
         MenuButtonSelected.PlayMenuButtonSelectedSound();
+
+        // Set Controls button as selected
+        controlsButton.GetComponent<Button>().Select();
+
         if (instructions != null)
         {
             Destroy(instructions);
