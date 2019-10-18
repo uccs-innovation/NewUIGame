@@ -17,7 +17,12 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     GameObject portalPanel;
 
+    [SerializeField]
+    GameObject backButton;
+
     List<LevelObject> portals;
+
+    List<GameObject> buttons = new List<GameObject>();
 
     AvailablePortals availablePortals;
 
@@ -28,6 +33,7 @@ public class LevelManager : MonoBehaviour
         portals = availablePortals.GetPortals();
 
         PopulateButtons();
+
     }
 
     void PopulateButtons()
@@ -39,6 +45,7 @@ public class LevelManager : MonoBehaviour
             button.name = portal.name;
             button.GetComponentInChildren<TextMeshProUGUI>().text = portal.levelName;
             button.GetComponent<Button>().onClick.AddListener(OnLevelSelected);
+            buttons.Add(button);
         }
 
         // Fill the row (if needed) for asthetic value
@@ -47,6 +54,42 @@ public class LevelManager : MonoBehaviour
         for (int i = 0; i < (5 - portals.Count); i++)
         {
             Instantiate(placeholder, portalPanel.transform);
+        }
+
+        ConnectButtons();
+    }
+
+    void ConnectButtons()
+    {
+        EventSystem.current.firstSelectedGameObject = buttons[0];
+        Navigation nav = backButton.GetComponent<Button>().navigation;
+        nav.selectOnUp = buttons[0].GetComponent<Button>();
+        backButton.GetComponent<Button>().navigation = nav;
+
+        for (int i = 0; i < buttons.Count; i++)
+        {
+            Button buttonObject = buttons[i].GetComponent<Button>();
+            nav = buttonObject.navigation;
+            nav.selectOnDown = backButton.GetComponent<Button>();
+
+            if (i == buttons.Count - 1)
+            {
+                nav.selectOnRight = buttons[0].GetComponent<Button>();
+            }
+            else
+            {
+                nav.selectOnRight = buttons[i + 1].GetComponent<Button>();
+            }
+
+            if (i == 0)
+            {
+                nav.selectOnLeft = buttons[buttons.Count - 1].GetComponent<Button>();
+            }
+            else
+            {
+                nav.selectOnLeft = buttons[i - 1].GetComponent<Button>();
+            }
+            buttonObject.navigation = nav;           
         }
     }
 

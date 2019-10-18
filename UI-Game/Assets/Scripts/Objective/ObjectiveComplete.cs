@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ObjectiveComplete : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class ObjectiveComplete : MonoBehaviour
 
     [SerializeField]
     TextMeshProUGUI speedBonusObject;
+
+    [SerializeField]
+    GameObject resumeButton;
 
     int speedBonusMultiplier = 1000;
 
@@ -33,6 +38,7 @@ public class ObjectiveComplete : MonoBehaviour
 
     private void Start()
     {
+       
         availablePortals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>();
         scoreController = GameObject.FindGameObjectWithTag("scoreController").GetComponent<ScoreController>();
         timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
