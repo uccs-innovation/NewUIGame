@@ -90,7 +90,7 @@ public class Player : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": ""Hold"",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Standard;ShootButtonSwitched"",
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -101,7 +101,7 @@ public class Player : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Standard;ShootButtonSwitched"",
                     ""action"": ""MoveRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -112,7 +112,7 @@ public class Player : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Standard;ShootButtonSwitched"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -123,7 +123,7 @@ public class Player : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Standard;ShootButtonSwitched"",
                     ""action"": ""MoveLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -134,7 +134,7 @@ public class Player : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Standard;ShootButtonSwitched"",
                     ""action"": ""ReleaseLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -145,7 +145,7 @@ public class Player : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Standard;ShootButtonSwitched"",
                     ""action"": ""ReleaseRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -156,7 +156,7 @@ public class Player : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Standard;ShootButtonSwitched"",
                     ""action"": ""ReleaseJump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -167,7 +167,7 @@ public class Player : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Standard"",
                     ""action"": ""ReleaseShoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -175,7 +175,30 @@ public class Player : IInputActionCollection, IDisposable
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""Standard"",
+            ""bindingGroup"": ""Standard"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""ShootButtonSwitched"",
+            ""bindingGroup"": ""ShootButtonSwitched"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
         // Gameplay
         m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
@@ -321,6 +344,24 @@ public class Player : IInputActionCollection, IDisposable
         }
     }
     public GameplayActions @Gameplay => new GameplayActions(this);
+    private int m_StandardSchemeIndex = -1;
+    public InputControlScheme StandardScheme
+    {
+        get
+        {
+            if (m_StandardSchemeIndex == -1) m_StandardSchemeIndex = asset.FindControlSchemeIndex("Standard");
+            return asset.controlSchemes[m_StandardSchemeIndex];
+        }
+    }
+    private int m_ShootButtonSwitchedSchemeIndex = -1;
+    public InputControlScheme ShootButtonSwitchedScheme
+    {
+        get
+        {
+            if (m_ShootButtonSwitchedSchemeIndex == -1) m_ShootButtonSwitchedSchemeIndex = asset.FindControlSchemeIndex("ShootButtonSwitched");
+            return asset.controlSchemes[m_ShootButtonSwitchedSchemeIndex];
+        }
+    }
     public interface IGameplayActions
     {
         void OnShoot(InputAction.CallbackContext context);

@@ -8,12 +8,14 @@ public class PauseMenu : MonoBehaviour
     bool isPaused = false;
 
     [SerializeField]
-    GameObject instructionsPrefab;
+    GameObject controlSchemePrefab;
 
     GameObject instructions;
 
     // Instantiation of black background object
     Canvas pauseCanvas;
+
+    bool inControls = false;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,9 @@ public class PauseMenu : MonoBehaviour
     // Delegate for the game paused event
     void Pause()
     {
+        // If Control options menu is open
+        if (inControls) return;
+
         if (isPaused)
         {
             Cursor.visible = false;
@@ -54,17 +59,21 @@ public class PauseMenu : MonoBehaviour
 
     public void HandleControls()
     {
+        MenuButtonSelected.PlayMenuButtonSelectedSound();
+        inControls = true;
         pauseCanvas.enabled = false;
-        instructions = Instantiate(instructionsPrefab);
-        instructions.GetComponent<InstructionsScreen>().AddHandler(ReturnHandler);
+        instructions = Instantiate(controlSchemePrefab);
+        instructions.GetComponent<ControlSchemeSelect>().AddHandler(ReturnHandler);
     }
 
     void ReturnHandler()
     {
+        MenuButtonSelected.PlayMenuButtonSelectedSound();
         if (instructions != null)
         {
             Destroy(instructions);
             pauseCanvas.enabled = true;
+            inControls = false;
         }
     }
 

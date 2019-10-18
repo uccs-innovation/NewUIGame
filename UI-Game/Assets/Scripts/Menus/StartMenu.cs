@@ -16,26 +16,31 @@ public class StartMenu : MonoBehaviour
     }
     public void OnInstructionsButtonPressed()
     {
+        MenuButtonSelected.PlayMenuButtonSelectedSound();
         SceneManager.LoadScene("Instructions");
     }
 
     public void OnPlayButtonClicked()
     {
+        MenuButtonSelected.PlayMenuButtonSelectedSound();
         SceneManager.LoadScene("PlaymodeSelect");
     }
 
     public void OnCreditsButtonClicked()
     {
+        MenuButtonSelected.PlayMenuButtonSelectedSound();
         SceneManager.LoadScene("Credits");
     }
 
     public void OnQuitButtonClicked()
     {
+        MenuButtonSelected.PlayMenuButtonSelectedSound();
         Application.Quit();
     }
 
     public void OnOptionsClicked()
     {
+        MenuButtonSelected.PlayMenuButtonSelectedSound();
         SceneManager.LoadScene("Options");
     }
 

@@ -13,16 +13,19 @@ public class PlaymodeSelect : MonoBehaviour
     }
     public void OnNormalModeSelected()
     {
+        MenuButtonSelected.PlayMenuButtonSelectedSound();
         SceneManager.LoadScene("LevelSelect");
     }
 
     public void OnPortalPlaylistModeSelected()
     {
+        MenuButtonSelected.PlayMenuButtonSelectedSound();
         SceneManager.LoadScene("PlaylistSelect");
     }
 
     public void OnBackSelected()
     {
+        MenuButtonSelected.PlayMenuButtonSelectedSound();
         SceneManager.LoadScene("Start");
     }
 }

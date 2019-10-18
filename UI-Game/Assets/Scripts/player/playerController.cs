@@ -142,6 +142,9 @@ public class playerController : MonoBehaviour
         //gamepadMode = false;
 
         InputSystem.onDeviceChange += DeviceChange;
+
+        // Set preferred control scheme, use standard if none set
+        player.bindingMask = new InputBinding { groups = PlayerPrefs.GetString("ControlScheme", "Standard") };
     }
 
     void DeviceChange(InputDevice device, InputDeviceChange change)
@@ -149,6 +152,14 @@ public class playerController : MonoBehaviour
         gamepadMode = CheckGamepadState();
     }
 
+    public void SetControlScheme(InputBinding binding)
+    {
+        if (binding != null)
+        {
+            player.bindingMask = binding;         
+        }
+        
+    }
     // Handles collisions with platforms
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -175,6 +186,7 @@ public class playerController : MonoBehaviour
     // Handles the pausing of the play in response to game paused event
     void GamePausedHandler()
     {
+        shootButton = false;
         isPaused = !isPaused;
     }
 

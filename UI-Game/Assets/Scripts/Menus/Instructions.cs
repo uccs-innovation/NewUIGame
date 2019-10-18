@@ -7,6 +7,7 @@ public class Instructions : MonoBehaviour
 {
     public void OnBackButtonPressed()
     {
+        MenuButtonSelected.PlayMenuButtonSelectedSound();
         SceneManager.LoadScene("Start");
     }
 }

@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Managers\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Managers\ParticleSystemHandler.cs" />
     <Compile Include="Assets\Scripts\Managers\PlaylistManager.cs" />
+    <Compile Include="Assets\Scripts\Menus\ControlSchemeSelect.cs" />
     <Compile Include="Assets\Scripts\Menus\DragAndDrop.cs" />
     <Compile Include="Assets\Scripts\Menus\Instructions.cs" />
     <Compile Include="Assets\Scripts\Menus\Options.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="Assets\Scripts\Score\ScoreController.cs" />
     <Compile Include="Assets\Scripts\Singleton\SingletonBehavior.cs" />
     <Compile Include="Assets\Scripts\Sound\BackgroundMusic.cs" />
+    <Compile Include="Assets\Scripts\Sound\MenuButtonSelected.cs" />
     <Compile Include="Assets\Scripts\Spawning\Spawner.cs" />
     <Compile Include="Assets\Scripts\Timer\Timer.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
