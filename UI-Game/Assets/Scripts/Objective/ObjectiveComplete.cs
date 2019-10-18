@@ -45,6 +45,7 @@ public class ObjectiveComplete : MonoBehaviour
         Cursor.visible = true;
         Time.timeScale = 0;
 
+        resumeButton.GetComponent<Button>().Select();
         DisplayFinalScore();
     }
 

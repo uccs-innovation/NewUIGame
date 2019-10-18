@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 716}
   m_MaxSize: {x: 22012, y: 18066}
   vertical: 0
-  controlID: 15426
+  controlID: 5258
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 640, y: 716}
   m_MaxSize: {x: 18010, y: 18066}
   vertical: 1
-  controlID: 15427
+  controlID: 5259
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 640, y: 272}
   m_MaxSize: {x: 18010, y: 10022}
   vertical: 0
-  controlID: 15428
+  controlID: 5260
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -447,7 +447,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scenes
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders: []
@@ -459,7 +459,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c6350000
     m_LastClickedID: 13766
-    m_ExpandedIDs: ffffffff00000000803a0000ea3c00000a3e0000403e0000923f00009a3f000036410000
+    m_ExpandedIDs: ffffffff00000000823a0000423b0000ec3c00000c3e0000423e0000943f00009c3f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -484,10 +484,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 397}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000803a0000ea3c00000a3e0000403e0000923f00009a3f000036410000
+    m_ExpandedIDs: ffffffff00000000823a0000423b0000ec3c00000c3e0000423e0000943f00009c3f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -571,9 +571,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 203b0000
       m_LastClickedID: 0
-      m_ExpandedIDs: e8e7feff3aebfeff52ebfeff54ebfeffdaebfeff0aecfeff18eefeff26eefeff34eefeffa8f0feffb2f0feff26f3feff42f3feff4ef3feff56f3feff64f3feff00f6feff10f6feffda03ffffe209ffff5a16ffff9016ffff921fffff2c22ffffd222ffff0223ffff1425ffff2625ffff3825ffffb027ffffbe27ffff362affff562affff662affff722affff822affff242dffff382dffff069effff669effff90c1ffff2cc5ffffbec6ffff64c7ffffe4c9ffff64caffff8ecaffff80fbffff98530000c2530000445b00004c720000d0b2000010b30000
+      m_ExpandedIDs: 5a18ffff2819ffff3234fffffa35ffff3636ffff7636ffff9262ffffd062ffff8c63ffffd263ffff1264ffffb466ffff9667ffff4cbcffff9ebcffff80fbffff325b0000de76000082850000f885000012860000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -671,9 +671,9 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
   m_ActionsTreeState:
-    scrollPos: {x: 0, y: 37}
-    m_SelectedIDs: b2a022f3
-    m_LastClickedID: -215834446
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 162b0f27
+    m_LastClickedID: 655305494
     m_ExpandedIDs: ac3ffd8cde2746df0c8ffdeeb2a022f3bbfbbc28637a04328b6b9041922fb7432cf7cb5b672f54623efd7c6b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -787,7 +787,7 @@ MonoBehaviour:
       \"\"\n                },\n                {\n                    \"name\": \"Jump\",\n
       \                   \"type\": \"Button\",\n                    \"id\": \"cb62629c-7936-4d97-ba01-d0ce0d76b66c\",\n
       \                   \"expectedControlType\": \"\",\n                    \"processors\":
-      \"\",\n                    \"interactions\": \"Press(behavior=2)\"\n                },\n
+      \"\",\n                    \"interactions\": \"Press\"\n                },\n
       \               {\n                    \"name\": \"ReleaseLeft\",\n                    \"type\":
       \"Button\",\n                    \"id\": \"84b06a99-4407-453f-9e50-839cc6042834\",\n
       \                   \"expectedControlType\": \"\",\n                    \"processors\":
@@ -850,14 +850,15 @@ MonoBehaviour:
       \"\",\n                    \"id\": \"9dc1604f-323b-4ee4-b367-7a32ddc7ec9f\",\n
       \                   \"path\": \"<Gamepad>/rightTrigger\",\n                    \"interactions\":
       \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"Standard\",\n                    \"action\": \"ReleaseShoot\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": false\n                }\n
-      \           ]\n        }\n    ],\n    \"controlSchemes\": [\n        {\n            \"name\":
-      \"Standard\",\n            \"bindingGroup\": \"Standard\",\n            \"devices\":
-      [\n                {\n                    \"devicePath\": \"<Gamepad>\",\n                    \"isOptional\":
-      false,\n                    \"isOR\": false\n                }\n            ]\n
-      \       },\n        {\n            \"name\": \"ShootButtonSwitched\",\n            \"bindingGroup\":
-      \"ShootButtonSwitched\",\n            \"devices\": [\n                {\n                    \"devicePath\":
+      \"Standard;ShootButtonSwitched\",\n                    \"action\": \"ReleaseShoot\",\n
+      \                   \"isComposite\": false,\n                    \"isPartOfComposite\":
+      false\n                }\n            ]\n        }\n    ],\n    \"controlSchemes\":
+      [\n        {\n            \"name\": \"Standard\",\n            \"bindingGroup\":
+      \"Standard\",\n            \"devices\": [\n                {\n                    \"devicePath\":
+      \"<Gamepad>\",\n                    \"isOptional\": false,\n                    \"isOR\":
+      false\n                }\n            ]\n        },\n        {\n            \"name\":
+      \"ShootButtonSwitched\",\n            \"bindingGroup\": \"ShootButtonSwitched\",\n
+      \           \"devices\": [\n                {\n                    \"devicePath\":
       \"<Gamepad>\",\n                    \"isOptional\": false,\n                    \"isOR\":
       false\n                }\n            ]\n        }\n    ]\n}"
     m_IsDirty: 0
@@ -939,7 +940,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 49992
+  m_LastSelectedObjectID: 34336
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52

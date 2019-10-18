@@ -477,6 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3613528240da5274ba32d717629f2b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resumeButton: {fileID: 1642583270531615669}
 --- !u!1 &2674634674993706626
 GameObject:
   m_ObjectHideFlags: 0

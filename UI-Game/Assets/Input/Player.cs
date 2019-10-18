@@ -48,7 +48,7 @@ public class Player : IInputActionCollection, IDisposable
                     ""id"": ""cb62629c-7936-4d97-ba01-d0ce0d76b66c"",
                     ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)""
+                    ""interactions"": ""Press""
                 },
                 {
                     ""name"": ""ReleaseLeft"",
@@ -167,7 +167,7 @@ public class Player : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Standard"",
+                    ""groups"": ""Standard;ShootButtonSwitched"",
                     ""action"": ""ReleaseShoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
