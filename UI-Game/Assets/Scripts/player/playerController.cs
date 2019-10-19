@@ -10,6 +10,10 @@ public class playerController : MonoBehaviour
 
     Player player;
 
+    AudioSource[] sounds;
+    AudioSource jumpSound;
+    AudioSource landSound;
+
     public AnimationCurve accelerationCurve;
     public AnimationCurve decelerationCurve;
 
@@ -145,6 +149,10 @@ public class playerController : MonoBehaviour
 
         // Set preferred control scheme, use standard if none set
         player.bindingMask = new InputBinding { groups = PlayerPrefs.GetString("ControlScheme", "Standard") };
+
+        sounds = GetComponents<AudioSource>();
+        jumpSound = sounds[0];
+        landSound = sounds[1];
     }
 
     void DeviceChange(InputDevice device, InputDeviceChange change)
@@ -163,9 +171,16 @@ public class playerController : MonoBehaviour
     // Handles collisions with platforms
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "platform" && moveState == MoveStates.FALLING)           
+        if (collision.gameObject.tag == "platform" && (moveState == MoveStates.FALLING 
+            || moveState == MoveStates.IDLE))           
         {
-            if (collision.GetContact(0).normal.y < .1f) return;
+            if (collision.relativeVelocity.magnitude > 4)
+            {
+                landSound.pitch = Random.Range(.5f, .8f);
+                landSound.Play();
+            }
+            ContactPoint2D contactPoint = collision.GetContact(0);
+            if (contactPoint.normal.y < .1f) return;           
             moveState = MoveStates.IDLE;
             isGrounded = true;
         }       
@@ -281,6 +296,8 @@ public class playerController : MonoBehaviour
         {
             rb.velocity += Vector2.up * 7.3f; // 5.5
             moveState = MoveStates.JUMPING;
+            jumpSound.pitch = Random.Range(1.5f, 1.7f);
+            jumpSound.Play();
         }
 
         if (moveState != MoveStates.FALLING && rb.velocity.y < 0f)
