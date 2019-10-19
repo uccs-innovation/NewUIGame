@@ -163,17 +163,14 @@ public class playerController : MonoBehaviour
     // Handles collisions with platforms
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // *************** We also need to perform a raycast to ensure that player is standing on a platform **************
-        if (collision.gameObject.tag == "platform" && moveState == MoveStates.JUMPING)
+        if (collision.gameObject.tag == "platform" && moveState == MoveStates.FALLING)           
         {
-            moveState = MoveStates.FALLING;
-        }
-
-        if (!isGrounded)
-        {
+            if (collision.GetContact(0).normal.y < .1f) return;
+            moveState = MoveStates.IDLE;
             isGrounded = true;
-        }
+        }       
     }
+
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -280,7 +277,7 @@ public class playerController : MonoBehaviour
         }
 
         // First, let's check if player is trying to jump
-        if (jumpButton  && isGrounded)
+        if (jumpButton && isGrounded)
         {
             rb.velocity += Vector2.up * 7.3f; // 5.5
             moveState = MoveStates.JUMPING;
