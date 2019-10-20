@@ -46,7 +46,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Experimental.U2D.Animation.SpriteSkinEntity
     Unity.2D.IK.Editor.dll:
     - UnityEditor.Experimental.U2D.IK.IKEditorManager
-    - UnityEditor.Experimental.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.Experimental.U2D.IK.IKEditorManagerHelper
     - UnityEngine.Experimental.U2D.IK.FabrikSolver2D
@@ -72,10 +71,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -2349,4 +2346,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/PlaymodeSelect.unity
   - Assets/Scenes/PlaylistSelect.unity
   - Assets/Scenes/Options.unity
-  playerPath: C:/Users/crede/Desktop/HoppyGhost/UI-Game.exe
+  playerPath: C:/Users/Chad/Desktop/HoppyGhost/UI-Game.exe

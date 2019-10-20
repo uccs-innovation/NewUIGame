@@ -362,11 +362,13 @@ public class playerController : MonoBehaviour
         {
             case MoveStates.IDLE:
 
-                // Make necessary horizontal movement
-                transform.position += new Vector3(1, 0, 0) * currentHCurve.Evaluate(moveHorizontal) * translateSpeed * Time.deltaTime;
+                if (rb.velocity.y < 0) moveState = MoveStates.FALLING;
 
                 // If no horizontal input, then return without doing anything
                 if (moveHorizontal == 0) return;
+
+                // Make necessary horizontal movement
+                transform.position += new Vector3(1, 0, 0) * currentHCurve.Evaluate(moveHorizontal) * translateSpeed * Time.deltaTime;
 
                 // If we've made it to this point in code, then the player has just pressed A or D
                 // So let's set the currentcurve to acceleration curve
@@ -379,7 +381,7 @@ public class playerController : MonoBehaviour
                 // Make necessary Horizontal movement
                 transform.position += new Vector3(1, 0, 0) * currentHCurve.Evaluate(moveHorizontal) * translateSpeed * Time.deltaTime;
 
-                if (rb.velocity.y == 0) moveState = MoveStates.FALLING;
+                if (rb.velocity.y <= 0) moveState = MoveStates.FALLING;
                 break;
 
             case MoveStates.FALLING:
