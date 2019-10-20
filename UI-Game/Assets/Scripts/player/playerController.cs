@@ -13,6 +13,7 @@ public class playerController : MonoBehaviour
     AudioSource[] sounds;
     AudioSource jumpSound;
     AudioSource landSound;
+    AudioSource shootSound;
 
     CircleCollider2D coll;
 
@@ -155,6 +156,7 @@ public class playerController : MonoBehaviour
         sounds = GetComponents<AudioSource>();
         jumpSound = sounds[0];
         landSound = sounds[1];
+        shootSound = sounds[2];
     }
 
     void DeviceChange(InputDevice device, InputDeviceChange change)
@@ -229,6 +231,8 @@ public class playerController : MonoBehaviour
 
     void FireProjectile()
     {
+        shootSound.pitch = Random.Range(.4f, .45f);
+        shootSound.Play();
         firing = true;
         int flipped = isFlipped ? -1 : 1;
 
