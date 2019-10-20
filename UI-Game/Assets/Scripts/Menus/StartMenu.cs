@@ -23,7 +23,7 @@ public class StartMenu : MonoBehaviour
     public void OnPlayButtonClicked()
     {
         MenuButtonSelected.PlayMenuButtonSelectedSound();
-        SceneManager.LoadScene("PlaymodeSelect");
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public void OnCreditsButtonClicked()

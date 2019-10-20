@@ -21,6 +21,6 @@ public class ObjectiveFailed : MonoBehaviour
     public void HandleContinue()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("LevelSelect");
     }
 }

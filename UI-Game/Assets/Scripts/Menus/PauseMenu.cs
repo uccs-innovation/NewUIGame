@@ -62,7 +62,7 @@ public class PauseMenu : MonoBehaviour
     public void HandleQuit()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public void HandleControls()

@@ -94,7 +94,7 @@ public class ObjectiveComplete : MonoBehaviour
         else
         {
             Time.timeScale = 1;
-            SceneManager.LoadScene("Start");
+            SceneManager.LoadScene("LevelSelect");
         }
     }
 
