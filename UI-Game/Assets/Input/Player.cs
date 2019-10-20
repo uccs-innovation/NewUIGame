@@ -86,9 +86,9 @@ public class Player : IInputActionCollection, IDisposable
                     ""name"": ""Escape"",
                     ""type"": ""Button"",
                     ""id"": ""00f3901c-801e-40e8-b7b6-c0b2f1191296"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press(behavior=1)""
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [

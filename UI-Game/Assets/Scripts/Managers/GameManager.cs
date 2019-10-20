@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 {
     static UnityEvent gamePausedEvent = new UnityEvent();
 
-
     // is the game currently paused?
     bool isPaused = false;
 
@@ -15,29 +14,35 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<playerController>().AddPauseButtonListener(HandleEscape);
     }
 
-    // Update is called once per frame
-    void Update()
+    void HandleEscape()
     {
-        // Player pauses game
-        if (Input.GetKeyDown(KeyCode.Escape))
+        gamePausedEvent.Invoke();
+        if (!isPaused)
         {
-            gamePausedEvent.Invoke();
-            if (!isPaused)
-            {
-                Time.timeScale = 0f;
-                isPaused = true;
-            }
-            else
-            {
-                Time.timeScale = 1f;
-                isPaused = false;
-                Cursor.visible = false;
-            }
-
+            Time.timeScale = 0f;
+            isPaused = true;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            isPaused = false;
+            Cursor.visible = false;
         }
     }
+
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    // Player pauses game
+    //    if (Input.GetKeyDown(KeyCode.Escape))
+    //    {
+
+
+    //    }
+    //}
 
     public static void AddGamePausedEventListener(UnityAction handler)
     {

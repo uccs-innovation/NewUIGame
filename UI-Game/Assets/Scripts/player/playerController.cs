@@ -118,6 +118,10 @@ public class playerController : MonoBehaviour
         player.Gameplay.Disable();
     }
 
+    public void AddPauseButtonListener(UnityAction handler)
+    {
+        player.Gameplay.Escape.started += ctx => handler();
+    }
 
     // Start is called before the first frame update
     void Start()
