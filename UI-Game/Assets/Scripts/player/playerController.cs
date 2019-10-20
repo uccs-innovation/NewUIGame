@@ -14,6 +14,8 @@ public class playerController : MonoBehaviour
     AudioSource jumpSound;
     AudioSource landSound;
 
+    CircleCollider2D coll;
+
     public AnimationCurve accelerationCurve;
     public AnimationCurve decelerationCurve;
 
@@ -171,16 +173,18 @@ public class playerController : MonoBehaviour
     // Handles collisions with platforms
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "platform" && (moveState == MoveStates.FALLING 
-            || moveState == MoveStates.IDLE))           
+        if (collision.gameObject.tag == "platform" && moveState != MoveStates.IDLE && CheckBelowGhost())           
         {
+            //// Collect contact info
+            //ContactPoint2D contactPoint = collision.GetContact(0);
+            //if (contactPoint.normal.y < 1f) return;
+
+            // Velocity magnitude large enough to cause sound to trigger
             if (collision.relativeVelocity.magnitude > 4)
             {
                 landSound.pitch = Random.Range(.5f, .8f);
                 landSound.Play();
             }
-            ContactPoint2D contactPoint = collision.GetContact(0);
-            if (contactPoint.normal.y < .1f) return;           
             moveState = MoveStates.IDLE;
             isGrounded = true;
         }       
@@ -294,16 +298,13 @@ public class playerController : MonoBehaviour
         // First, let's check if player is trying to jump
         if (jumpButton && isGrounded)
         {
+            isGrounded = false;
             rb.velocity += Vector2.up * 7.3f; // 5.5
             moveState = MoveStates.JUMPING;
             jumpSound.pitch = Random.Range(1.5f, 1.7f);
             jumpSound.Play();
         }
 
-        if (moveState != MoveStates.FALLING && rb.velocity.y < 0f)
-        {
-            moveState = MoveStates.FALLING;
-        }
 
         //Store the current horizontal input in the float moveHorizontal.
         //moveHorizontal = Input.GetAxis("Horizontal");
@@ -333,6 +334,12 @@ public class playerController : MonoBehaviour
             if (Mathf.Abs(moveHorizontal) <= .05f) moveHorizontal = 0;
         }
 
+        //if (moveState != MoveStates.IDLE && CheckBelowGhost())
+        //{
+        //    moveState = MoveStates.IDLE;
+        //    isGrounded = true;
+        //}
+
         if (moveHorizontal < 0 && !isFlipped)
         {
             FlipGhost();
@@ -345,6 +352,7 @@ public class playerController : MonoBehaviour
             //sr.flipX = false;
             isFlipped = false;
         }
+
 
         switch (moveState)
         {
@@ -364,10 +372,10 @@ public class playerController : MonoBehaviour
 
             case MoveStates.JUMPING:
 
-                // Make necessary vertical movement
+                // Make necessary Horizontal movement
                 transform.position += new Vector3(1, 0, 0) * currentHCurve.Evaluate(moveHorizontal) * translateSpeed * Time.deltaTime;
-                isGrounded = false;
 
+                if (rb.velocity.y == 0) moveState = MoveStates.FALLING;
                 break;
 
             case MoveStates.FALLING:
@@ -378,13 +386,24 @@ public class playerController : MonoBehaviour
                 // Make necessarry vertical movement
                 rb.velocity += Vector2.down * Time.deltaTime * (firing ? 0f : 5f);
 
-                // If we've landed, then switch state to IDLE
-                if (isGrounded)
+                if(CheckBelowGhost())
                 {
                     moveState = MoveStates.IDLE;
-                    return;
+                    isGrounded = true;
                 }
                 break;
         }
     }
+
+    bool CheckBelowGhost()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, .3f, LayerMask.GetMask("Unwalkable"));
+
+        if (hit)
+        {
+            return true;
+        }
+        else return false;
+    }
+
 }
