@@ -46,6 +46,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Experimental.U2D.Animation.SpriteSkinEntity
     Unity.2D.IK.Editor.dll:
     - UnityEditor.Experimental.U2D.IK.IKEditorManager
+    - UnityEditor.Experimental.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.Experimental.U2D.IK.IKEditorManagerHelper
     - UnityEngine.Experimental.U2D.IK.FabrikSolver2D
@@ -441,7 +442,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -450,16 +455,44 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9524}
     - Class: 114
+      Script: {instanceID: 9682}
+    - Class: 114
+      Script: {instanceID: 9684}
+    - Class: 114
       Script: {instanceID: 9690}
+    - Class: 114
+      Script: {instanceID: 9696}
+    - Class: 114
+      Script: {instanceID: 9700}
+    - Class: 114
+      Script: {instanceID: 9704}
+    - Class: 114
+      Script: {instanceID: 9752}
     - Class: 114
       Script: {instanceID: 10468}
     - Class: 114
+      Script: {instanceID: 11742}
+    - Class: 114
       Script: {instanceID: 11812}
     - Class: 114
+      Script: {instanceID: 12000}
+    - Class: 114
       Script: {instanceID: 12356}
+    - Class: 114
+      Script: {instanceID: 12410}
     - Class: 115
       Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/PlaylistSelect.unity:
     - Class: 1

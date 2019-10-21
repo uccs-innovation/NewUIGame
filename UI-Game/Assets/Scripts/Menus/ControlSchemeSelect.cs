@@ -16,21 +16,21 @@ public class ControlSchemeSelect : MonoBehaviour
     public void OnSchemeOneSelected()
     {
         PlayerPrefs.SetString("KeyboardScheme", "Keyboard_1");
-        playerController.SetControlScheme(new InputBinding { groups = PlayerPrefs.GetString("KeyboardScheme", "Keyboard_1") });
+        playerController.SetControlScheme(new InputBinding { groups = "Keyboard_1"});
         //MenuButtonSelected.PlayMenuButtonSelectedSound();
     }
 
     public void OnSchemeTwoSelected()
     {
         PlayerPrefs.SetString("KeyboardScheme", "Keyboard_2");
-        playerController.SetControlScheme(new InputBinding { groups = PlayerPrefs.GetString("KeyboardScheme", "Keyboard_2") });
+        playerController.SetControlScheme(new InputBinding { groups = "Keyboard_2" });
         //MenuButtonSelected.PlayMenuButtonSelectedSound();
     }
 
     public void OnSchemeThreeSelected()
     {
         PlayerPrefs.SetString("KeyboardScheme", "Keyboard_3");
-        playerController.SetControlScheme(new InputBinding { groups = PlayerPrefs.GetString("KeyboardScheme", "Keyboard_3") });
+        playerController.SetControlScheme(new InputBinding { groups = "Keyboard_3"});
         //MenuButtonSelected.PlayMenuButtonSelectedSound();
     }
 
