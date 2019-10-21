@@ -15,15 +15,15 @@ public class ControlSchemeSelect : MonoBehaviour
     }
     public void OnSchemeOneSelected()
     {
-        PlayerPrefs.SetString("ControlScheme", "Standard");
-        playerController.SetControlScheme(new InputBinding { groups = "Standard" });
+        //PlayerPrefs.SetString("ControlScheme", "Standard");
+        //playerController.SetControlScheme(new InputBinding { groups = "Standard" });
         //MenuButtonSelected.PlayMenuButtonSelectedSound();
     }
 
     public void OnSchemeTwoSelected()
     {
-        PlayerPrefs.SetString("ControlScheme", "ShootButtonSwitched");
-        playerController.SetControlScheme(new InputBinding { groups = "ShootButtonSwitched" });
+        //PlayerPrefs.SetString("ControlScheme", "ShootButtonSwitched");
+        //playerController.SetControlScheme(new InputBinding { groups = "ShootButtonSwitched" });
         //MenuButtonSelected.PlayMenuButtonSelectedSound();
     }
 

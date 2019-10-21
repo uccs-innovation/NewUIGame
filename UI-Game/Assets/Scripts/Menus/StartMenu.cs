@@ -34,7 +34,7 @@ public class StartMenu : MonoBehaviour
 
     public void OnQuitButtonClicked()
     {
-        MenuButtonSelected.PlayMenuButtonSelectedSound();
+        //MenuButtonSelected.PlayMenuButtonSelectedSound();
         Application.Quit();
     }
 
