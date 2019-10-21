@@ -126,7 +126,16 @@ public class playerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetString("KeyboardScheme", "Keyboard_1");
+
+        if (PlayerPrefs.GetString("KeyboardScheme") == null)
+        {
+            PlayerPrefs.SetString("KeyboardScheme", "Keyboard_1");
+        }
+
+        if (PlayerPrefs.GetString("ControlScheme") == null)
+        {
+            PlayerPrefs.SetString("ControlScheme", "Standard");
+        }
 
         animator = gameObject.GetComponent<Animator>();
 
@@ -294,16 +303,6 @@ public class playerController : MonoBehaviour
     {
         // Don't run the update method if the game is paused
         if (isPaused) return;
-
-        //if (!gamepadMode)
-        //{
-        //    shootButton = Input.GetKey(ControlScheme.Shoot);
-        //    jumpButton = Input.GetKey(ControlScheme.Jump);
-        //    moveLeftButton = Input.GetKey(ControlScheme.MoveLeft);
-        //    moveRightButton = Input.GetKey(ControlScheme.MoveRight);
-        //    moveLeftButtonUp = Input.GetKeyUp(ControlScheme.MoveLeft);
-        //    moveRightButtonUp = Input.GetKeyUp(ControlScheme.MoveRight);
-        //}
 
         // If A or D key has just been released, then set horizontal curve to deceleration
         if (moveRightButtonUp)
