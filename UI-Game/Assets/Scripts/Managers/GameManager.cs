@@ -17,8 +17,19 @@ public class GameManager : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<playerController>().AddPauseButtonListener(HandleEscape);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            HandleEscape();
+        }
+    }
+
     void HandleEscape()
     {
+        // If the player in is the Controls menu from pause
+        if (PauseMenu.inControls) return;
+
         gamePausedEvent.Invoke();
         if (!isPaused)
         {

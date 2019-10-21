@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class PauseMenu : MonoBehaviour
     // Instantiation of black background object
     Canvas pauseCanvas;
 
-    bool inControls = false;
+    public static bool inControls = false;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,7 @@ public class PauseMenu : MonoBehaviour
 
         if (isPaused)
         {
+            EventSystem.current.SetSelectedGameObject(null);
             Cursor.visible = false;
             pauseCanvas.enabled = false;
             isPaused = false;
@@ -81,11 +83,13 @@ public class PauseMenu : MonoBehaviour
         // Set Controls button as selected
         controlsButton.GetComponent<Button>().Select();
 
+        pauseCanvas.enabled = true;
+        inControls = false;
+
         if (instructions != null)
         {
             Destroy(instructions);
-            pauseCanvas.enabled = true;
-            inControls = false;
+
         }
     }
 
