@@ -77,9 +77,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
-    UnityEditor.UI.dll:
-    - UnityEditor.UI.HorizontalOrVerticalLayoutGroupEditor
-    - UnityEditor.UI.ImageEditor
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
@@ -306,6 +303,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9690}
     - Class: 114
+      Script: {instanceID: 9692}
+    - Class: 114
       Script: {instanceID: 9696}
     - Class: 114
       Script: {instanceID: 9700}
@@ -453,6 +452,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -463,6 +466,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9684}
     - Class: 114
       Script: {instanceID: 9690}
+    - Class: 114
+      Script: {instanceID: 9692}
     - Class: 114
       Script: {instanceID: 9696}
     - Class: 114
@@ -722,6 +727,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9690}
     - Class: 114
+      Script: {instanceID: 9692}
+    - Class: 114
       Script: {instanceID: 9696}
     - Class: 114
       Script: {instanceID: 9700}
@@ -931,6 +938,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9684}
     - Class: 114
       Script: {instanceID: 9690}
+    - Class: 114
+      Script: {instanceID: 9692}
     - Class: 114
       Script: {instanceID: 9696}
     - Class: 114
@@ -2400,4 +2409,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/PlaymodeSelect.unity
   - Assets/Scenes/PlaylistSelect.unity
   - Assets/Scenes/Options.unity
-  playerPath: C:/Users/Chad/Desktop/HoppyGhost/UI-Game.exe
+  playerPath: C:/Users/crede/Desktop/HoppyGhost/UI-Game.exe
