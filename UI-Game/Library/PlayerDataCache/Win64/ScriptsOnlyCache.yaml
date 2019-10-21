@@ -77,9 +77,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
-    UnityEditor.UI.dll:
-    - UnityEditor.UI.HorizontalOrVerticalLayoutGroupEditor
-    - UnityEditor.UI.ImageEditor
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
@@ -2368,4 +2365,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/PlaymodeSelect.unity
   - Assets/Scenes/PlaylistSelect.unity
   - Assets/Scenes/Options.unity
-  playerPath: C:/Users/crede/Desktop/HoppyGhost/UI-Game.exe
+  playerPath: C:/Users/Chad/Desktop/HoppyGhost/UI-Game.exe

@@ -126,6 +126,8 @@ public class playerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetString("KeyboardScheme", "Keyboard_1");
+
         animator = gameObject.GetComponent<Animator>();
 
         // Adds this script as a listener for the event when the player falls from a platform
@@ -149,13 +151,20 @@ public class playerController : MonoBehaviour
 
         availablePortals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>();
 
-        gamepadMode = CheckGamepadState();
-        //gamepadMode = false;
-
         InputSystem.onDeviceChange += DeviceChange;
 
-        // Set preferred control scheme, use standard if none set
-        player.bindingMask = new InputBinding { groups = PlayerPrefs.GetString("ControlScheme", "Standard") };
+        gamepadMode = CheckGamepadState();
+        if (gamepadMode)
+        {
+            // Set preferred control scheme, use standard if none set
+            player.bindingMask = new InputBinding { groups = PlayerPrefs.GetString("ControlScheme", "Standard") };
+        }
+        else
+        {
+            // Set preferred control scheme, use standard if none set
+            player.bindingMask = new InputBinding { groups = PlayerPrefs.GetString("KeyboardScheme", "Keyboard_1") };
+        }
+
 
         sounds = GetComponents<AudioSource>();
         jumpSound = sounds[0];
@@ -166,6 +175,16 @@ public class playerController : MonoBehaviour
     void DeviceChange(InputDevice device, InputDeviceChange change)
     {
         gamepadMode = CheckGamepadState();
+        if (gamepadMode)
+        {
+            // Set preferred control scheme, use standard if none set
+            player.bindingMask = new InputBinding { groups = PlayerPrefs.GetString("ControlScheme", "Standard") };
+        }
+        else
+        {
+            // Set preferred control scheme, use standard if none set
+            player.bindingMask = new InputBinding { groups = PlayerPrefs.GetString("KeyboardScheme", "Keyboard_1") };
+        }
     }
 
     public void SetControlScheme(InputBinding binding)
@@ -276,23 +295,29 @@ public class playerController : MonoBehaviour
         // Don't run the update method if the game is paused
         if (isPaused) return;
 
-        if (!gamepadMode)
-        {
-            shootButton = Input.GetKey(ControlScheme.Shoot);
-            jumpButton = Input.GetKey(ControlScheme.Jump);
-            moveLeftButton = Input.GetKey(ControlScheme.MoveLeft);
-            moveRightButton = Input.GetKey(ControlScheme.MoveRight);
-            moveLeftButtonUp = Input.GetKeyUp(ControlScheme.MoveLeft);
-            moveRightButtonUp = Input.GetKeyUp(ControlScheme.MoveRight);
-        }
+        //if (!gamepadMode)
+        //{
+        //    shootButton = Input.GetKey(ControlScheme.Shoot);
+        //    jumpButton = Input.GetKey(ControlScheme.Jump);
+        //    moveLeftButton = Input.GetKey(ControlScheme.MoveLeft);
+        //    moveRightButton = Input.GetKey(ControlScheme.MoveRight);
+        //    moveLeftButtonUp = Input.GetKeyUp(ControlScheme.MoveLeft);
+        //    moveRightButtonUp = Input.GetKeyUp(ControlScheme.MoveRight);
+        //}
 
         // If A or D key has just been released, then set horizontal curve to deceleration
-        if (moveLeftButtonUp || moveRightButtonUp)
+        if (moveRightButtonUp)
         {
-            moveLeftButtonUp = false;
-            moveRightButtonUp = false;
-            moveLeftButton = false;
             moveRightButton = false;
+            moveRightButtonUp = false;
+            animator.SetBool("isLeaning", false);
+            currentHCurve = decelerationCurve;
+        }
+
+        if (moveLeftButtonUp)
+        {
+            moveLeftButton = false;
+            moveLeftButtonUp = false;
             animator.SetBool("isLeaning", false);
             currentHCurve = decelerationCurve;
         }

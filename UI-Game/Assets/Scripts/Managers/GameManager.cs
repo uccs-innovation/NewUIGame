@@ -17,13 +17,13 @@ public class GameManager : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<playerController>().AddPauseButtonListener(HandleEscape);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            HandleEscape();
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Escape))
+    //    {
+    //        HandleEscape();
+    //    }
+    //}
 
     void HandleEscape()
     {

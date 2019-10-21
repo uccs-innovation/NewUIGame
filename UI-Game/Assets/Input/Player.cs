@@ -36,9 +36,9 @@ public class Player : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""MoveLeft"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""b81cb9e3-f060-44bb-856b-23a5a2478f66"",
-                    ""expectedControlType"": ""Axis"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
@@ -105,11 +105,33 @@ public class Player : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""33bc5433-ff6c-4a2e-9849-28fefb125378"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard_1"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""82dd3a67-4135-49a4-a799-f3690b160015"",
                     ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Standard;ShootButtonSwitched"",
+                    ""action"": ""MoveRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f62c948d-b5d4-4a34-a891-c235189959cc"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard_1"",
                     ""action"": ""MoveRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -127,11 +149,33 @@ public class Player : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""9dea5196-19d1-40d7-9df1-55f05e6fb89b"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard_1"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""920b2a6d-50e8-4ff8-a54b-8c71fbd2af94"",
                     ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Standard;ShootButtonSwitched"",
+                    ""action"": ""MoveLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f030b449-bde7-4059-8bb3-a379b0eaed45"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard_1"",
                     ""action"": ""MoveLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -149,11 +193,33 @@ public class Player : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""0d4a258d-e517-454b-8169-8ee4d775985f"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard_1"",
+                    ""action"": ""ReleaseLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""ae1400ee-3ffb-4030-8efd-8a37e92eae6c"",
                     ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Standard;ShootButtonSwitched"",
+                    ""action"": ""ReleaseRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c9f0b001-2009-4889-82ec-b72fb42b3f0e"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard_1"",
                     ""action"": ""ReleaseRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -171,6 +237,17 @@ public class Player : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""c6023777-0018-4ada-8cdb-02a6d6b37f6b"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard_1"",
+                    ""action"": ""ReleaseJump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""9dc1604f-323b-4ee4-b367-7a32ddc7ec9f"",
                     ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
@@ -182,11 +259,33 @@ public class Player : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""f6802526-28a5-49b7-b3e1-2471f779853e"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard_1"",
+                    ""action"": ""ReleaseShoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""88a9037d-9a30-4f29-ba82-69f1ba4ab89d"",
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Standard;ShootButtonSwitched"",
+                    ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e49070fe-0b1e-4e06-a60a-9a229e656e9a"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard_1;Keyboard_2"",
                     ""action"": ""Escape"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -212,6 +311,28 @@ public class Player : IInputActionCollection, IDisposable
             ""devices"": [
                 {
                     ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Keyboard_1"",
+            ""bindingGroup"": ""Keyboard_1"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Keyboard_2"",
+            ""bindingGroup"": ""Keyboard_2"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
                     ""isOptional"": false,
                     ""isOR"": false
                 }
@@ -388,6 +509,24 @@ public class Player : IInputActionCollection, IDisposable
         {
             if (m_ShootButtonSwitchedSchemeIndex == -1) m_ShootButtonSwitchedSchemeIndex = asset.FindControlSchemeIndex("ShootButtonSwitched");
             return asset.controlSchemes[m_ShootButtonSwitchedSchemeIndex];
+        }
+    }
+    private int m_Keyboard_1SchemeIndex = -1;
+    public InputControlScheme Keyboard_1Scheme
+    {
+        get
+        {
+            if (m_Keyboard_1SchemeIndex == -1) m_Keyboard_1SchemeIndex = asset.FindControlSchemeIndex("Keyboard_1");
+            return asset.controlSchemes[m_Keyboard_1SchemeIndex];
+        }
+    }
+    private int m_Keyboard_2SchemeIndex = -1;
+    public InputControlScheme Keyboard_2Scheme
+    {
+        get
+        {
+            if (m_Keyboard_2SchemeIndex == -1) m_Keyboard_2SchemeIndex = asset.FindControlSchemeIndex("Keyboard_2");
+            return asset.controlSchemes[m_Keyboard_2SchemeIndex];
         }
     }
     public interface IGameplayActions
