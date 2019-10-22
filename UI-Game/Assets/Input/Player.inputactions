@@ -14,14 +14,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "MoveRight",
-                    "type": "Button",
-                    "id": "e2316ca6-9c77-4b67-a2b3-a14588b20d1f",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "MoveLeft",
                     "type": "Button",
                     "id": "b81cb9e3-f060-44bb-856b-23a5a2478f66",
@@ -76,6 +68,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press"
+                },
+                {
+                    "name": "MoveRight",
+                    "type": "Button",
+                    "id": "aa83ffc2-08e0-4b8a-9efd-56f09a86fa36",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -126,6 +126,17 @@
                 {
                     "name": "",
                     "id": "b8b19afe-76f0-491d-837f-bd6072f2b2f3",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "RightHanded",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "33892e07-06b0-4b71-b50f-0f27e0c4f435",
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
@@ -136,44 +147,11 @@
                 },
                 {
                     "name": "",
-                    "id": "82dd3a67-4135-49a4-a799-f3690b160015",
-                    "path": "<Gamepad>/leftStick/right",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "Standard;ShootButtonSwitched",
-                    "action": "MoveRight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f62c948d-b5d4-4a34-a891-c235189959cc",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard_1;Keyboard_3",
-                    "action": "MoveRight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "468542ad-828b-49df-b31b-cb013345952b",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard_2",
-                    "action": "MoveRight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "72d9a81a-d14f-492d-9d87-66ad5f15acd0",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Standard;ShootButtonSwitched",
+                    "groups": "Standard;ShootButtonSwitched;RightHanded",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -217,7 +195,7 @@
                     "path": "<Gamepad>/leftStick/left",
                     "interactions": "Press",
                     "processors": "",
-                    "groups": "Standard;ShootButtonSwitched",
+                    "groups": "Standard;ShootButtonSwitched;RightHanded",
                     "action": "MoveLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -250,7 +228,7 @@
                     "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Standard;ShootButtonSwitched",
+                    "groups": "Standard;ShootButtonSwitched;RightHanded",
                     "action": "ReleaseLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -283,7 +261,7 @@
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Standard;ShootButtonSwitched",
+                    "groups": "Standard;ShootButtonSwitched;RightHanded",
                     "action": "ReleaseRight",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -327,7 +305,7 @@
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Standard;ShootButtonSwitched",
+                    "groups": "Standard;ShootButtonSwitched;RightHanded",
                     "action": "ReleaseJump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -412,6 +390,17 @@
                 {
                     "name": "",
                     "id": "b359f873-33b6-481e-8b73-7b28f4df6ff7",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "RightHanded",
+                    "action": "ReleaseShoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d85afcb7-1764-4b4f-b51a-5b488ec260b0",
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
@@ -423,10 +412,10 @@
                 {
                     "name": "",
                     "id": "88a9037d-9a30-4f29-ba82-69f1ba4ab89d",
-                    "path": "<Gamepad>/buttonEast",
+                    "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Standard;ShootButtonSwitched",
+                    "groups": "Standard;ShootButtonSwitched;RightHanded",
                     "action": "Escape",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -439,6 +428,28 @@
                     "processors": "",
                     "groups": "Keyboard_1;Keyboard_2;Keyboard_3",
                     "action": "Escape",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c883c9c1-ae25-476d-ac6c-b92755de9747",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "ShootButtonSwitched",
+                    "action": "MoveRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "64c99302-597f-4187-bbe6-30ff808d5ad0",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "ShootButtonSwitched;Standard;RightHanded",
+                    "action": "MoveRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -506,6 +517,17 @@
                 },
                 {
                     "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "RightHanded",
+            "bindingGroup": "RightHanded",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
                     "isOptional": false,
                     "isOR": false
                 }

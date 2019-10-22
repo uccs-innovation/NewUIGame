@@ -27,14 +27,6 @@ public class Player : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""MoveRight"",
-                    ""type"": ""Button"",
-                    ""id"": ""e2316ca6-9c77-4b67-a2b3-a14588b20d1f"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""MoveLeft"",
                     ""type"": ""Button"",
                     ""id"": ""b81cb9e3-f060-44bb-856b-23a5a2478f66"",
@@ -89,6 +81,14 @@ public class Player : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""MoveRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""aa83ffc2-08e0-4b8a-9efd-56f09a86fa36"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -139,6 +139,17 @@ public class Player : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b8b19afe-76f0-491d-837f-bd6072f2b2f3"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""RightHanded"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""33892e07-06b0-4b71-b50f-0f27e0c4f435"",
                     ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -149,44 +160,11 @@ public class Player : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""82dd3a67-4135-49a4-a799-f3690b160015"",
-                    ""path"": ""<Gamepad>/leftStick/right"",
-                    ""interactions"": ""Press"",
-                    ""processors"": """",
-                    ""groups"": ""Standard;ShootButtonSwitched"",
-                    ""action"": ""MoveRight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f62c948d-b5d4-4a34-a891-c235189959cc"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard_1;Keyboard_3"",
-                    ""action"": ""MoveRight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""468542ad-828b-49df-b31b-cb013345952b"",
-                    ""path"": ""<Keyboard>/rightArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard_2"",
-                    ""action"": ""MoveRight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""72d9a81a-d14f-492d-9d87-66ad5f15acd0"",
                     ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Standard;ShootButtonSwitched"",
+                    ""groups"": ""Standard;ShootButtonSwitched;RightHanded"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -230,7 +208,7 @@ public class Player : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
-                    ""groups"": ""Standard;ShootButtonSwitched"",
+                    ""groups"": ""Standard;ShootButtonSwitched;RightHanded"",
                     ""action"": ""MoveLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -263,7 +241,7 @@ public class Player : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Standard;ShootButtonSwitched"",
+                    ""groups"": ""Standard;ShootButtonSwitched;RightHanded"",
                     ""action"": ""ReleaseLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -296,7 +274,7 @@ public class Player : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Standard;ShootButtonSwitched"",
+                    ""groups"": ""Standard;ShootButtonSwitched;RightHanded"",
                     ""action"": ""ReleaseRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -340,7 +318,7 @@ public class Player : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Standard;ShootButtonSwitched"",
+                    ""groups"": ""Standard;ShootButtonSwitched;RightHanded"",
                     ""action"": ""ReleaseJump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -425,6 +403,17 @@ public class Player : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b359f873-33b6-481e-8b73-7b28f4df6ff7"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""RightHanded"",
+                    ""action"": ""ReleaseShoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d85afcb7-1764-4b4f-b51a-5b488ec260b0"",
                     ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -436,10 +425,10 @@ public class Player : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""88a9037d-9a30-4f29-ba82-69f1ba4ab89d"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""path"": ""<Gamepad>/start"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Standard;ShootButtonSwitched"",
+                    ""groups"": ""Standard;ShootButtonSwitched;RightHanded"",
                     ""action"": ""Escape"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -452,6 +441,28 @@ public class Player : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard_1;Keyboard_2;Keyboard_3"",
                     ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c883c9c1-ae25-476d-ac6c-b92755de9747"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""ShootButtonSwitched"",
+                    ""action"": ""MoveRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""64c99302-597f-4187-bbe6-30ff808d5ad0"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""ShootButtonSwitched;Standard;RightHanded"",
+                    ""action"": ""MoveRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -523,13 +534,23 @@ public class Player : IInputActionCollection, IDisposable
                     ""isOR"": false
                 }
             ]
+        },
+        {
+            ""name"": ""RightHanded"",
+            ""bindingGroup"": ""RightHanded"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
         }
     ]
 }");
         // Gameplay
         m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
         m_Gameplay_Shoot = m_Gameplay.FindAction("Shoot", throwIfNotFound: true);
-        m_Gameplay_MoveRight = m_Gameplay.FindAction("MoveRight", throwIfNotFound: true);
         m_Gameplay_MoveLeft = m_Gameplay.FindAction("MoveLeft", throwIfNotFound: true);
         m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
         m_Gameplay_ReleaseLeft = m_Gameplay.FindAction("ReleaseLeft", throwIfNotFound: true);
@@ -537,6 +558,7 @@ public class Player : IInputActionCollection, IDisposable
         m_Gameplay_ReleaseJump = m_Gameplay.FindAction("ReleaseJump", throwIfNotFound: true);
         m_Gameplay_ReleaseShoot = m_Gameplay.FindAction("ReleaseShoot", throwIfNotFound: true);
         m_Gameplay_Escape = m_Gameplay.FindAction("Escape", throwIfNotFound: true);
+        m_Gameplay_MoveRight = m_Gameplay.FindAction("MoveRight", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -587,7 +609,6 @@ public class Player : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Gameplay;
     private IGameplayActions m_GameplayActionsCallbackInterface;
     private readonly InputAction m_Gameplay_Shoot;
-    private readonly InputAction m_Gameplay_MoveRight;
     private readonly InputAction m_Gameplay_MoveLeft;
     private readonly InputAction m_Gameplay_Jump;
     private readonly InputAction m_Gameplay_ReleaseLeft;
@@ -595,12 +616,12 @@ public class Player : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_ReleaseJump;
     private readonly InputAction m_Gameplay_ReleaseShoot;
     private readonly InputAction m_Gameplay_Escape;
+    private readonly InputAction m_Gameplay_MoveRight;
     public struct GameplayActions
     {
         private Player m_Wrapper;
         public GameplayActions(Player wrapper) { m_Wrapper = wrapper; }
         public InputAction @Shoot => m_Wrapper.m_Gameplay_Shoot;
-        public InputAction @MoveRight => m_Wrapper.m_Gameplay_MoveRight;
         public InputAction @MoveLeft => m_Wrapper.m_Gameplay_MoveLeft;
         public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
         public InputAction @ReleaseLeft => m_Wrapper.m_Gameplay_ReleaseLeft;
@@ -608,6 +629,7 @@ public class Player : IInputActionCollection, IDisposable
         public InputAction @ReleaseJump => m_Wrapper.m_Gameplay_ReleaseJump;
         public InputAction @ReleaseShoot => m_Wrapper.m_Gameplay_ReleaseShoot;
         public InputAction @Escape => m_Wrapper.m_Gameplay_Escape;
+        public InputAction @MoveRight => m_Wrapper.m_Gameplay_MoveRight;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -620,9 +642,6 @@ public class Player : IInputActionCollection, IDisposable
                 Shoot.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnShoot;
                 Shoot.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnShoot;
                 Shoot.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnShoot;
-                MoveRight.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveRight;
-                MoveRight.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveRight;
-                MoveRight.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveRight;
                 MoveLeft.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveLeft;
                 MoveLeft.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveLeft;
                 MoveLeft.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveLeft;
@@ -644,6 +663,9 @@ public class Player : IInputActionCollection, IDisposable
                 Escape.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnEscape;
                 Escape.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnEscape;
                 Escape.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnEscape;
+                MoveRight.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveRight;
+                MoveRight.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveRight;
+                MoveRight.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveRight;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -651,9 +673,6 @@ public class Player : IInputActionCollection, IDisposable
                 Shoot.started += instance.OnShoot;
                 Shoot.performed += instance.OnShoot;
                 Shoot.canceled += instance.OnShoot;
-                MoveRight.started += instance.OnMoveRight;
-                MoveRight.performed += instance.OnMoveRight;
-                MoveRight.canceled += instance.OnMoveRight;
                 MoveLeft.started += instance.OnMoveLeft;
                 MoveLeft.performed += instance.OnMoveLeft;
                 MoveLeft.canceled += instance.OnMoveLeft;
@@ -675,6 +694,9 @@ public class Player : IInputActionCollection, IDisposable
                 Escape.started += instance.OnEscape;
                 Escape.performed += instance.OnEscape;
                 Escape.canceled += instance.OnEscape;
+                MoveRight.started += instance.OnMoveRight;
+                MoveRight.performed += instance.OnMoveRight;
+                MoveRight.canceled += instance.OnMoveRight;
             }
         }
     }
@@ -724,10 +746,18 @@ public class Player : IInputActionCollection, IDisposable
             return asset.controlSchemes[m_Keyboard_3SchemeIndex];
         }
     }
+    private int m_RightHandedSchemeIndex = -1;
+    public InputControlScheme RightHandedScheme
+    {
+        get
+        {
+            if (m_RightHandedSchemeIndex == -1) m_RightHandedSchemeIndex = asset.FindControlSchemeIndex("RightHanded");
+            return asset.controlSchemes[m_RightHandedSchemeIndex];
+        }
+    }
     public interface IGameplayActions
     {
         void OnShoot(InputAction.CallbackContext context);
-        void OnMoveRight(InputAction.CallbackContext context);
         void OnMoveLeft(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnReleaseLeft(InputAction.CallbackContext context);
@@ -735,5 +765,6 @@ public class Player : IInputActionCollection, IDisposable
         void OnReleaseJump(InputAction.CallbackContext context);
         void OnReleaseShoot(InputAction.CallbackContext context);
         void OnEscape(InputAction.CallbackContext context);
+        void OnMoveRight(InputAction.CallbackContext context);
     }
 }

@@ -44,8 +44,8 @@ public class GamepadSchemeSelect : MonoBehaviour
 
     public void OnSchemeThreeSelected()
     {
-        PlayerPrefs.SetString("ControlScheme", "ShootButtonSwitched");
-        playerController.SetControlScheme(new InputBinding { groups = "ShootButtonSwitched" });
+        PlayerPrefs.SetString("ControlScheme", "RightHanded");
+        playerController.SetControlScheme(new InputBinding { groups = "RightHanded" });
         TMText.text = "Scheme 3 Selected";
         MenuButtonSelected.PlayMenuButtonSelectedSound();
     }
