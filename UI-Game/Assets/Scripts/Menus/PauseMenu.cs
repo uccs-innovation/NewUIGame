@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField]
     GameObject controlSchemePrefab;
+
+    [SerializeField]
+    GameObject gamepadSchemePrefab;
 
     [SerializeField]
     GameObject controlsButton;
@@ -72,12 +76,24 @@ public class PauseMenu : MonoBehaviour
         MenuButtonSelected.PlayMenuButtonSelectedSound();
         inControls = true;
         pauseCanvas.enabled = false;
-        instructions = Instantiate(controlSchemePrefab);
-        instructions.GetComponent<ControlSchemeSelect>().AddHandler(ReturnHandler);
+
+        if (Gamepad.current != null)
+        {
+            instructions = Instantiate(gamepadSchemePrefab);
+            instructions.GetComponent<GamepadSchemeSelect>().AddHandler(ReturnHandler);
+        }
+        else
+        {
+            instructions = Instantiate(controlSchemePrefab);
+            instructions.GetComponent<ControlSchemeSelect>().AddHandler(ReturnHandler);
+        }
     }
+            
+        
 
     void ReturnHandler()
     {
+
         MenuButtonSelected.PlayMenuButtonSelectedSound();
 
         // Set Controls button as selected
@@ -89,7 +105,6 @@ public class PauseMenu : MonoBehaviour
         if (instructions != null)
         {
             Destroy(instructions);
-
         }
     }
 
