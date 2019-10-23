@@ -22,7 +22,7 @@ public class PathRequestManager : MonoBehaviour
     }
     public static void RequestPath(Vector3 pathStart, Vector3 pathEnd, Action<Vector3[], bool> callback)
     {
-        pathEnd = grid.GetRandomNode().worldPosition;
+        //pathEnd = grid.GetRandomNode().worldPosition;
         PathRequest newRequest = new PathRequest(pathStart, pathEnd, callback);
         instance.pathRequestQueue.Enqueue(newRequest);
         instance.TryProcessNext();

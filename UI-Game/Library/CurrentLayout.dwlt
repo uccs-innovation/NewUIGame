@@ -44,7 +44,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 5}
-  m_MinSize: {x: 950, y: 644}
+  m_MinSize: {x: 950, y: 622}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 120}
   m_MaxSize: {x: 4000, y: 4020}
   vertical: 0
-  controlID: 68
+  controlID: 1084
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -118,7 +118,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 1117
-  m_MinSize: {x: 950, y: 644}
+  m_MinSize: {x: 950, y: 622}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &6
 MonoBehaviour:
@@ -184,10 +184,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 1067
-  m_MinSize: {x: 917, y: 594}
-  m_MaxSize: {x: 22012, y: 14044}
+  m_MinSize: {x: 911, y: 572}
+  m_MaxSize: {x: 22006, y: 14022}
   vertical: 0
-  controlID: 4701
+  controlID: 1348
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,10 +209,10 @@ MonoBehaviour:
     y: 0
     width: 1393
     height: 1067
-  m_MinSize: {x: 640, y: 594}
-  m_MaxSize: {x: 18010, y: 14044}
+  m_MinSize: {x: 636, y: 572}
+  m_MaxSize: {x: 18006, y: 14022}
   vertical: 1
-  controlID: 4702
+  controlID: 1349
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -235,10 +235,10 @@ MonoBehaviour:
     y: 0
     width: 1393
     height: 745
-  m_MinSize: {x: 640, y: 272}
-  m_MaxSize: {x: 18010, y: 10022}
+  m_MinSize: {x: 636, y: 272}
+  m_MaxSize: {x: 18006, y: 10022}
   vertical: 0
-  controlID: 4703
+  controlID: 1350
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -401,18 +401,18 @@ MonoBehaviour:
     height: 1008
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
-  m_WindowGUID: df26861739f5ef746a18329c216d2798
+  m_WindowGUID: 9d08ce6c4ee943b44b9b7058bb7d186b
   m_Gizmos: 1
-  m_SceneIsLit: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 0.8020658, y: -0.58834416, z: -0.29103196}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 0.8609245, y: -0.69769436, z: -0.24618214}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -445,9 +445,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 257.73822
+    m_Target: 11.901038
     speed: 2
-    m_Value: 257.73822
+    m_Value: 12.46182
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -591,7 +591,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/UI
+    - Assets/Scripts/Spawning
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders: []
@@ -603,7 +603,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c6350000
     m_LastClickedID: 13766
-    m_ExpandedIDs: ffffffff00000000a03a0000ba3a0000603b00000c3d00007c3d00002c3e0000523e00006e3e0000c23f0000ca3f000056410000
+    m_ExpandedIDs: ffffffff00000000a03a0000ba3a0000603b00000c3d0000763d00007c3d00002c3e0000523e00006e3e0000c23f0000ca3f000056410000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -628,10 +628,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 87}
+    scrollPos: {x: 0, y: 879}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000a03a0000ba3a0000603b00000c3d00007c3d00002c3e0000523e00006e3e0000c23f0000ca3f000056410000
+    m_ExpandedIDs: ffffffff00000000a03a0000ba3a0000603b00000c3d0000763d00007c3d00002c3e0000523e00006e3e0000c23f0000ca3f000056410000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -715,9 +715,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 845d0000
-      m_LastClickedID: 23940
-      m_ExpandedIDs: a4b5ffffb8b5ffff845d0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 80fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1016,8 +1016,8 @@ MonoBehaviour:
     m_SearchString: 
   m_ActionsTreeState:
     scrollPos: {x: 0, y: 73}
-    m_SelectedIDs: 48b73e94
-    m_LastClickedID: -1807829176
+    m_SelectedIDs: 7f9d6566
+    m_LastClickedID: 1717935487
     m_ExpandedIDs: ac3ffd8cde2746df0c8ffdeeb2a022f37eb463f4ab5b4801bbfbbc28637a043262d0ed408b6b9041922fb7436c5108562cf7cb5b672f54623efd7c6b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1389,13 +1389,19 @@ MonoBehaviour:
       \                   \"interactions\": \"\",\n                    \"processors\":
       \"\",\n                    \"groups\": \"ShootButtonSwitched;Standard;RightHanded\",\n
       \                   \"action\": \"MoveRight\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": false\n                }\n
-      \           ]\n        }\n    ],\n    \"controlSchemes\": [\n        {\n            \"name\":
-      \"Standard\",\n            \"bindingGroup\": \"Standard\",\n            \"devices\":
-      [\n                {\n                    \"devicePath\": \"<Gamepad>\",\n                    \"isOptional\":
-      false,\n                    \"isOR\": false\n                }\n            ]\n
-      \       },\n        {\n            \"name\": \"ShootButtonSwitched\",\n            \"bindingGroup\":
-      \"ShootButtonSwitched\",\n            \"devices\": [\n                {\n                    \"devicePath\":
+      false,\n                    \"isPartOfComposite\": false\n                },\n
+      \               {\n                    \"name\": \"\",\n                    \"id\":
+      \"deb9dd98-74dc-40d9-934c-cc64de8ab93e\",\n                    \"path\": \"<Keyboard>/d\",\n
+      \                   \"interactions\": \"\",\n                    \"processors\":
+      \"\",\n                    \"groups\": \"Keyboard_1;Keyboard_3\",\n                    \"action\":
+      \"MoveRight\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
+      false\n                }\n            ]\n        }\n    ],\n    \"controlSchemes\":
+      [\n        {\n            \"name\": \"Standard\",\n            \"bindingGroup\":
+      \"Standard\",\n            \"devices\": [\n                {\n                    \"devicePath\":
+      \"<Gamepad>\",\n                    \"isOptional\": false,\n                    \"isOR\":
+      false\n                }\n            ]\n        },\n        {\n            \"name\":
+      \"ShootButtonSwitched\",\n            \"bindingGroup\": \"ShootButtonSwitched\",\n
+      \           \"devices\": [\n                {\n                    \"devicePath\":
       \"<Gamepad>\",\n                    \"isOptional\": false,\n                    \"isOR\":
       false\n                }\n            ]\n        },\n        {\n            \"name\":
       \"Keyboard_1\",\n            \"bindingGroup\": \"Keyboard_1\",\n            \"devices\":
@@ -1421,7 +1427,7 @@ MonoBehaviour:
     m_IsDirty: 0
   m_Toolbar:
     m_IsDirty: 0
-    m_SelectedControlSchemeIndex: 5
+    m_SelectedControlSchemeIndex: 2
     m_SelectedDeviceRequirementIndex: -1
     m_ControlSchemes:
     - m_Name: Standard
