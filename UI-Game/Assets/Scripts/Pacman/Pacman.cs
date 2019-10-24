@@ -47,6 +47,7 @@ public class Pacman : MonoBehaviour
         {
             explosionSound.Play();
             GameObject explosion = Instantiate(pacmanExplosion, null);
+            Screenshake.smallShakeEvent.Invoke();
             explosion.transform.position = transform.position;
             pacmanDeath.Invoke(gameObject, 100);
         }
@@ -56,6 +57,7 @@ public class Pacman : MonoBehaviour
         {
             explosionSound.Play();
             GameObject explosion = Instantiate(pacmanExplosion, null);
+            Screenshake.bigShakeEvent.Invoke();
             explosion.transform.position = transform.position;
             pacmanDeath.Invoke(gameObject, 25);
         }

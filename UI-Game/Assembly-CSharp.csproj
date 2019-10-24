@@ -102,6 +102,7 @@
     <Compile Include="Assets\Scripts\Scenes\InstructionsScene.cs" />
     <Compile Include="Assets\Scripts\Scenes\MotivatorScene.cs" />
     <Compile Include="Assets\Scripts\Score\ScoreController.cs" />
+    <Compile Include="Assets\Scripts\Screenshake\Screenshake.cs" />
     <Compile Include="Assets\Scripts\Singleton\SingletonBehavior.cs" />
     <Compile Include="Assets\Scripts\Sound\BackgroundMusic.cs" />
     <Compile Include="Assets\Scripts\Sound\MenuButtonSelected.cs" />
