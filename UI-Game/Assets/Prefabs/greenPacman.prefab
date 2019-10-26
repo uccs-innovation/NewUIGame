@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 1659473406002310006}
   - component: {fileID: 1700014805334953714}
   - component: {fileID: 6812414364661343222}
+  - component: {fileID: 6175915768969657565}
   m_Layer: 11
   m_Name: greenPacman
   m_TagString: pacman
@@ -292,6 +293,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!50 &6175915768969657565
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659473406002310012}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1659473406686274141
 GameObject:
   m_ObjectHideFlags: 0
