@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<playerController>().AddPauseButtonListener(HandleEscape);
     }
 
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1f;
             isPaused = false;
-            Cursor.visible = false;
+            //Cursor.visible = false;
         }
     }
 

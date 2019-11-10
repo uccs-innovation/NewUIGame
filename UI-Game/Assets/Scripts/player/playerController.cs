@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class playerController : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class playerController : MonoBehaviour
     AnimationCurve currentVCurve;
 
     // How fast the player moves left or right
-    float translateSpeed = 4.8f; //4.3
+    float translateSpeed = 4.8f; //4.8
 
     // Reference to the player ghost rigidbody
     Rigidbody2D rb;
@@ -160,7 +161,7 @@ public class playerController : MonoBehaviour
 
         availablePortals = GameObject.FindGameObjectWithTag("availablePortals").GetComponent<AvailablePortals>();
 
-        InputSystem.onDeviceChange += DeviceChange;
+        //InputSystem.onDeviceChange += DeviceChange;
 
         gamepadMode = CheckGamepadState();
         if (gamepadMode)
@@ -300,7 +301,43 @@ public class playerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { 
+        float shoot = CrossPlatformInputManager.GetAxisRaw("Shoot");
+
+        if (CrossPlatformInputManager.GetButton("Left"))
+        {
+            moveRightButton = false;
+            moveLeftButton = true;
+        }
+        else if (CrossPlatformInputManager.GetButton("Right"))
+        {
+            moveRightButton = true;
+            moveLeftButton = false;
+        }
+        else
+        {
+            moveRightButton = false;
+            moveLeftButton = false;
+        }
+
+        if (CrossPlatformInputManager.GetButtonDown("Jump"))
+        {
+            jumpButton = true;
+        }
+        else
+        {
+            jumpButton = false;
+        }
+
+        if (CrossPlatformInputManager.GetButtonDown("Shoot"))
+        {
+            shootButton = true;
+        }
+        else
+        {
+            shootButton = false;
+        }
+
         // Don't run the update method if the game is paused
         if (isPaused) return;
 
