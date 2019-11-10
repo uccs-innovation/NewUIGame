@@ -476,6 +476,17 @@ public class Player : IInputActionCollection, IDisposable
                     ""action"": ""MoveRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""58958f92-c676-4bf9-ada2-8b62b02ef10f"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard_2"",
+                    ""action"": ""MoveRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }

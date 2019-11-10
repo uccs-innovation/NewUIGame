@@ -1085,15 +1085,7 @@ MonoBehaviour:
     be awarded the next Portal*** (only 3 portals exist in the game)
 
 
-    Multiple Item Select: "Portal Playlist" mode has been added. This allows the player
-    to drag portals from their inventory into a playlist and play them in order (looping).
-    Additional effect: Immortality! This feature will allow players to improve their
-    skills through repetitive play in a forgiving setting.
-
-
-    Configurable controls: The player can select from three control schemes. Accessible
-    from Options menu. This will provide the player with the option to use mouse and
-    arrow keys if preferred.'
+'
 --- !u!222 &1722641690
 CanvasRenderer:
   m_ObjectHideFlags: 0

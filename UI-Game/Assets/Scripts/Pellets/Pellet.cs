@@ -9,7 +9,7 @@ public class Pellet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "pacman")
+        if (collision.tag == "Player")
         {
             collected.Invoke(gameObject);
         }

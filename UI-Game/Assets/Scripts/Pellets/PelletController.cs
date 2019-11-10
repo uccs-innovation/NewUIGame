@@ -12,6 +12,7 @@ public class PelletController : MonoBehaviour
 
     AudioSource pelletCollectedSound; 
 
+    // **** THIS IS ACTUALLY GAME LOSE EVENT!!! ****
     UnityEvent GameWinEvent = new UnityEvent();
 
     // Start is called before the first frame update

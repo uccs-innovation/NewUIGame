@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 1067
-  m_MinSize: {x: 911, y: 594}
-  m_MaxSize: {x: 22006, y: 14044}
+  m_MinSize: {x: 909, y: 594}
+  m_MaxSize: {x: 22004, y: 14044}
   vertical: 0
-  controlID: 11569
+  controlID: 215
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -127,10 +127,10 @@ MonoBehaviour:
     y: 0
     width: 1393
     height: 1067
-  m_MinSize: {x: 636, y: 594}
-  m_MaxSize: {x: 18006, y: 14044}
+  m_MinSize: {x: 632, y: 594}
+  m_MaxSize: {x: 18002, y: 14044}
   vertical: 1
-  controlID: 11412
+  controlID: 216
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -153,10 +153,10 @@ MonoBehaviour:
     y: 0
     width: 1393
     height: 745
-  m_MinSize: {x: 636, y: 272}
-  m_MaxSize: {x: 18006, y: 10022}
+  m_MinSize: {x: 632, y: 272}
+  m_MaxSize: {x: 18002, y: 10022}
   vertical: 0
-  controlID: 11388
+  controlID: 217
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,8 +176,8 @@ MonoBehaviour:
     y: 0
     width: 232
     height: 745
-  m_MinSize: {x: 232, y: 272}
-  m_MaxSize: {x: 10002, y: 10022}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -221,7 +221,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Input
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders: []
@@ -233,7 +233,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c6350000
     m_LastClickedID: 13766
-    m_ExpandedIDs: ffffffff00000000a63a0000c03a0000663b0000143d0000843d0000363e0000783e0000cc3f0000d43f000022400000
+    m_ExpandedIDs: 00000000a63a0000663b00005c3e0000783e0000cc3f0000d43f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -258,10 +258,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 387}
-    m_SelectedIDs: 443b0000
-    m_LastClickedID: 15172
-    m_ExpandedIDs: ffffffff00000000a63a0000c03a0000663b0000143d0000843d0000363e0000783e0000cc3f0000d43f000022400000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: ffffffff00000000a63a0000663b00005c3e0000783e0000cc3f0000d43f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -286,8 +286,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 443b0000
-    m_LastClickedInstanceID: 15172
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -335,8 +335,8 @@ MonoBehaviour:
     y: 0
     width: 204
     height: 745
-  m_MinSize: {x: 204, y: 222}
-  m_MaxSize: {x: 4004, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -373,7 +373,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 725efeffa862feff3263feff6463feff1267feff2467feff3667feff326afeff406afeff3c6dfeff606dfeff706dfeff7c6dfeff8e6dfeffb870feffca70feffda38ffff223cffffe83cffff1e3dffffc840ffffd640ffffe440ffffdc43ffffe643ffffde46fffffe46ffff0a47ffff1247ffff2047ffff2e47ffff4c47ffff344bffff80fbffff9e430000b8430000de430000
+      m_ExpandedIDs: 80fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -416,8 +416,8 @@ MonoBehaviour:
     y: 0
     width: 957
     height: 745
-  m_MinSize: {x: 204, y: 222}
-  m_MaxSize: {x: 4004, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -469,17 +469,17 @@ MonoBehaviour:
     y: 745
     width: 1393
     height: 322
-  m_MinSize: {x: 302, y: 322}
-  m_MaxSize: {x: 4002, y: 4022}
-  m_ActualView: {fileID: 14}
+  m_MinSize: {x: 600, y: 300}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 12}
   - {fileID: 13}
   - {fileID: 14}
   - {fileID: 15}
   - {fileID: 16}
-  m_Selected: 2
-  m_LastSelected: 0
+  m_Selected: 4
+  m_LastSelected: 2
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -562,7 +562,7 @@ MonoBehaviour:
     height: 303
   m_ViewDataDictionary: {fileID: 0}
   m_PosLeft: {x: 0, y: 0}
-  m_PosRight: {x: 0, y: 481}
+  m_PosRight: {x: 0, y: 0}
   m_Scope: 1
   m_SplitterFlex: 0.2
 --- !u!114 &15
@@ -729,8 +729,8 @@ MonoBehaviour:
     m_SearchString: 
   m_ActionsTreeState:
     scrollPos: {x: 0, y: 73}
-    m_SelectedIDs: 7f9d6566
-    m_LastClickedID: 1717935487
+    m_SelectedIDs: 64c4e315
+    m_LastClickedID: 367248484
     m_ExpandedIDs: ac3ffd8cde2746df0c8ffdeeb2a022f37eb463f4ab5b4801bbfbbc28637a043262d0ed408b6b9041922fb7436c5108562cf7cb5b672f54623efd7c6b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1108,13 +1108,18 @@ MonoBehaviour:
       \                   \"interactions\": \"\",\n                    \"processors\":
       \"\",\n                    \"groups\": \"Keyboard_1;Keyboard_3\",\n                    \"action\":
       \"MoveRight\",\n                    \"isComposite\": false,\n                    \"isPartOfComposite\":
-      false\n                }\n            ]\n        }\n    ],\n    \"controlSchemes\":
-      [\n        {\n            \"name\": \"Standard\",\n            \"bindingGroup\":
-      \"Standard\",\n            \"devices\": [\n                {\n                    \"devicePath\":
-      \"<Gamepad>\",\n                    \"isOptional\": false,\n                    \"isOR\":
-      false\n                }\n            ]\n        },\n        {\n            \"name\":
-      \"ShootButtonSwitched\",\n            \"bindingGroup\": \"ShootButtonSwitched\",\n
-      \           \"devices\": [\n                {\n                    \"devicePath\":
+      false\n                },\n                {\n                    \"name\":
+      \"\",\n                    \"id\": \"58958f92-c676-4bf9-ada2-8b62b02ef10f\",\n
+      \                   \"path\": \"<Keyboard>/rightArrow\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Keyboard_2\",\n                    \"action\": \"MoveRight\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                }\n
+      \           ]\n        }\n    ],\n    \"controlSchemes\": [\n        {\n            \"name\":
+      \"Standard\",\n            \"bindingGroup\": \"Standard\",\n            \"devices\":
+      [\n                {\n                    \"devicePath\": \"<Gamepad>\",\n                    \"isOptional\":
+      false,\n                    \"isOR\": false\n                }\n            ]\n
+      \       },\n        {\n            \"name\": \"ShootButtonSwitched\",\n            \"bindingGroup\":
+      \"ShootButtonSwitched\",\n            \"devices\": [\n                {\n                    \"devicePath\":
       \"<Gamepad>\",\n                    \"isOptional\": false,\n                    \"isOR\":
       false\n                }\n            ]\n        },\n        {\n            \"name\":
       \"Keyboard_1\",\n            \"bindingGroup\": \"Keyboard_1\",\n            \"devices\":
@@ -1140,7 +1145,7 @@ MonoBehaviour:
     m_IsDirty: 0
   m_Toolbar:
     m_IsDirty: 0
-    m_SelectedControlSchemeIndex: 2
+    m_SelectedControlSchemeIndex: 3
     m_SelectedDeviceRequirementIndex: -1
     m_ControlSchemes:
     - m_Name: Standard
@@ -1205,8 +1210,8 @@ MonoBehaviour:
     y: 0
     width: 527
     height: 1067
-  m_MinSize: {x: 277, y: 72}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}

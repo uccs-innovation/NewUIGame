@@ -331,7 +331,7 @@ public class playerController : MonoBehaviour
         if (jumpButton && isGrounded)
         {
             isGrounded = false;
-            rb.velocity += Vector2.up * 7.3f; // 5.5
+            rb.velocity += Vector2.up * 7.3f; // 7.3
             moveState = MoveStates.JUMPING;
             jumpSound.pitch = Random.Range(1.5f, 1.7f);
             jumpSound.Play();

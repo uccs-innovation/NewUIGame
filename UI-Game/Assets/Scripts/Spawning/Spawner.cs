@@ -50,6 +50,8 @@ public class Spawner : MonoBehaviour
 
     void SpawnPacman()
     {
+        if (spawnedPacmen.Count >= maxEnemiesSpawned) return;
+
         GameObject pacman = Instantiate(SelectPacman(), SpawnPoint(), Quaternion.identity, null);
 
         pacman.GetComponent<Unit>().target = GameObject.FindGameObjectWithTag("Player").transform;

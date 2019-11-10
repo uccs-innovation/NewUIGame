@@ -60,7 +60,9 @@ ScriptsOnlyBuild:
     Unity.Entities.Hybrid.dll:
     - Unity.Entities.PlayerLoopDisableManager
     Unity.InputSystem.dll:
+    - UnityEngine.InputSystem.Editor.InputActionAssetEditor
     - UnityEngine.InputSystem.Editor.InputActionEditorWindow
+    - UnityEngine.InputSystem.Editor.InputActionImporterEditor
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
@@ -76,10 +78,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
